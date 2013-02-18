@@ -1,0 +1,326 @@
+<!-- Beginning Portal view definition -->
+<%
+// This is server side, so let's make displaying labels easier:
+// use:   L('[labelKey]')
+var L = function(key) { return data.labels.getLabel(key); };
+%>
+<div id="ui-container" class="container">
+
+    <!--ADD MODULE - START-->
+    <div id="add-module" class="container"><button type="button" id="btn-addmodule"class="btn right-align"><%- L('[apprad.portal.addModule]') %></button></div>
+    <!--ADD MODULE - END-->
+    
+	<!--MODULES ICON - START-->
+    <div class=" jcarousel-skin-tango">
+        <div class="jcarousel-container jcarousel-container-horizontal" style="position: relative; display: block; ">
+            <div class="jcarousel-clip jcarousel-clip-horizontal" style="overflow: hidden; position: relative; ">
+                <ul id="mycarousel" class="jcarousel-list jcarousel-list-horizontal">
+                
+                
+					<li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-1 jcarousel-item-1-horizontal" style="float: left; list-style: none; " jcarouselindex="1">
+						<img src="/appRAD/portal/images/icon.jpg" width="75" height="75" alt="" >
+						<div class="module-name"><h5>Site</h5></div>
+					</li>
+					
+					<li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-2 jcarousel-item-2-horizontal" style="float: left; list-style: none; " jcarouselindex="2">
+					    <div class="module-active"></div>
+					    <img src="/appRAD/portal/images/icon.jpg" width="75" height="75" alt="">
+					    <div class="module-name"><h5>appRAD</h5></div>
+					</li>        
+					                
+                </ul>
+            </div>
+        	<div class="jcarousel-prev jcarousel-prev-horizontal" style="display: block; " disabled="false"></div><div class="jcarousel-next jcarousel-next-horizontal" style="display: block; " disabled="false"></div>
+        </div>
+    </div>
+    <!--MODULES ICON - END-->
+    
+    <!--ADD MODULE - START-->
+    <div class="add-option">
+        <!--CONTENT OF ADD OPTION - START-->
+        	<div class="row-fluid space-top space-bottom">
+            	<!--left - start-->
+            	<div id="choose-icon" class="span5">
+                	<img src="/appRAD/portal/images/icon.jpg" width="75" height="75" border="0">
+                </div>
+                <!--left - end-->
+                
+                <!--right - start-->
+                <div id="choose-icon-txt" class="span7">
+                	<p><%- L('[apprad.portal.chooseIconForModule]') %></p>
+                </div>
+                <!--right - end-->
+            </div>    
+        	<input type="text" class="input-medium option-input" placeholder="<%- L('[apprad.portal.moduleName]') %>">
+            <div class="control-group error">
+                <label class="control-label center-align" for="inputError"><%- L('[apprad.portal.errorModuleNameInUse]') %></label>
+            </div>
+            <div class="save center-align">
+                <a href="#" class="btn btn-medium btn-danger option-cancel"><%- L('[site.button.Cancel]') %></a>
+                <a href="#" class="btn  btn-medium btn-danger option-submit"><%- L('[site.button.Submit]') %></a>
+            </div> 
+        <!--CONTENT OF ADD OPTION - START-->                                  
+    </div>    
+    <!--ADD MODULE - END-->
+    
+    
+    
+    <!--SUMMARY BLOCK OF MODULE - START-->
+    <div id="summary-block" class="container-fluid">
+    	<!---->
+    	<div class="row-fluid">
+        	<!--Info Icon - Start-->
+            <div id="info-icon" class="span4">
+            	<div id="icon-img">
+                    <img src="/appRAD/portal/images/icon.jpg" width="75" height="75" border="0" alt="">
+                </div>
+                <div id="module-name">
+                	<h3>HRiS</h3>
+                    <p><b>v: 4</b></p>
+                </div>
+            </div>
+            <!--Info Icon - End-->
+            <!--Info Block 2 - Start-->
+            <div id="info-block2" class="span4 margright">
+            	<p class="help-inline">info block 2: some data here</p>
+            </div>
+            <!--Info Block 2 - End-->
+            <!--Info Block 3 - Start-->
+            <div id="info-block3" class="span4">
+	            <p class="help-inline">info block 2: some data here</p>
+            </div>
+            <!--Info Block 3 - Start-->
+        </div>
+        <!---->
+    </div>
+    <!--SUMMARY BLOCK OF MODULE - END-->
+    
+    
+	<!--TABS - START-->
+    <div id="module-tabs">
+        <ul id="myTab" class="nav nav-tabs">
+            <li class=""><a href="#module-install" data-toggle="tab"><%- L('[apprad.portal.install]') %></a></li>
+            <li class=""><a href="#module-models" data-toggle="tab"><%- L('[apprad.portal.models]') %></a></li>
+            <li class=""><a href="#server" data-toggle="tab"><%- L('[apprad.portal.server]') %></a></li>
+            <li class=""><a href="#titanium" data-toggle="tab"><%- L('[apprad.portal.titanium]') %></a></li>
+            <li class=""><a href="#web-ui" data-toggle="tab"><%- L('[apprad.portal.webui]') %></a></li>
+            <li class=""><a href="#labels" data-toggle="tab"><%- L('[apprad.portal.labels]') %></a></li>
+            <li class=""><a href="#permissions" data-toggle="tab"><%- L('[apprad.portal.permissions]') %></a></li>
+        </ul>
+        
+        
+        
+        
+        <!--CONTENT OF MODULE TAB-->
+        <div id="myTabContent" class="tab-content">
+        
+        
+	        <!--INSTALL WORKING AREA-->
+	        <div class="tab-pane fade" id="module-install">
+	        
+	        	<div id="tab-text" class="container">
+			        <h4><%- L('[apprad.portal.toolTitle.install]') %></h4>
+		        </div>
+	        
+		        <!--Install tabs -->
+		        <div id="tabs">
+		            <ul class="nav nav-tabs">
+		              <li><a href="#tab-1">Installation</a></li>
+		              <li><a href="#tab-2">Revisions</a></li>
+		            </ul>
+			        <section id="tab-text" class="container">
+			            <h4>These Tools are to help you manage the install files for this module</h4>
+			        </section>
+					
+		            
+		            
+		        </div>
+		        <!--Install tabs - end-->
+	        
+	        </div>
+	        <!--INSTALL WORKING END-->
+        
+        
+			<!--MODELS-->
+            <div class="tab-pane fade" id="module-models">
+            
+            	<div id="tab-text" class="container">
+			        <h4><%- L('[apprad.portal.toolTitle.model]') %></h4>
+		        </div>
+		        
+		        
+            	<!--container- start-->
+                <div class="container-fluid space-bottom">
+                    <div class="row-fluid">
+                        <!--LEFT COLUMN "MODEL" - START-->
+                        <div class="span3 borders space-top margin1percent-left admin">
+                            <!--header start-->
+                            <div class="header">
+                                <div class="header-title"><h4>Models</h4></div>
+                                <div class="add-delete">
+                                    <a href="#" title="Add"><span class="icon-plus"></span></a>
+                                    <a href="#" title="Delete"><span class="icon-minus"></span></a>
+                                    <a href="#" title="Edit"><span class="icon-edit"></span></a>
+                                </div>
+                            </div>
+                            <!--header end-->
+                            
+                            <!--CONTENT OF MODULE HERE-->
+                            <ul class="admin-list">
+                                <li><a href="#">HRIS</a></li>
+                                <li><a href="#">Site</a></li>
+                                <li><a href="#">Stewardwise</a></li>
+                            </ul>                        
+                            <!--CONTENT OF MODULE END-->
+                            <!--DELETE LABELS - START-->
+                            <div class="span2 delete">
+                                <!--CONTENT OF ADD OPTION - START-->    
+                                    <div class="control-group error">
+                                        <label class="control-label center-align" for="inputError">Really Delete <span class="bold">[btnC]?:</span></label>
+                                    </div>
+                                    <div class="save center-align">
+                                        <a href="#" class="label-cancel btn btn-medium btn-danger option-cancel">Cancel</a>
+                                        <a href="#" class="label-delete btn  btn-medium btn-danger ">Delete</a>
+                                    </div> 
+                             </div>
+                             <!--ADD CONTROLLERS - END-->  
+                               
+                            <!--ADD CONTROLLERS - START-->
+                            <div class="span2 add">
+                                <!--CONTENT OF ADD OPTION - START-->    
+                                <input type="text" class="span12 option-input" placeholder="name:">
+                                <div class="control-group error">
+                                    <label class="control-label center-align" for="inputError">error msg area</label>
+                                </div>
+                                <div class="save center-align">
+                                    <a href="#" class="ctrl-cancel btn btn-medium btn-danger option-cancel">Cancel</a>
+                                    <a href="#" class="ctrl-save btn  btn-medium btn-danger ">Save</a>
+                                </div> 
+                            </div>
+                            <!--ADD CONTROLLERS - END-->                            
+                        </div>
+                        <!--LEFT COLUMN "MODEL" - END-->
+                        
+                        <!--RIGHT COLUMN "CREATE MODEL" - START-->
+                        <div class="span9">
+                            <h3>Create Model</h3>
+                            <div id="tabs2">
+                                <ul class="nav nav-tabs">
+                                  <li><a href="#tab2-1">SQL</a></li>
+                                  <li><a href="#tab2-2">FS</a></li>
+                                  <li><a href="#tab2-3">CAS</a></li>
+                                  <li><a href="#tab2-4">OAuth</a></li>
+                                </ul>
+                                <!--SQL TAB 1 - start-->
+                                <div id="tab2-1" class="do container-fluid clear">
+                                    <!--links-->
+                                    <div class="row-fluid">
+                                        <div class="span6"><h3><a class="sql-createdb" href="#create-dbtable">Create from DB Table</a></h3></div>
+                                        <div class="span6"><h3><a class="sql-definition" href="#create-definition">Create from Definition</a></h3></div>
+                                    </div>
+                                    <!--links end-->
+                                    
+                                    <div class="row-fluid">
+                                    <!--create from DB Table - start--> 
+                                    <div id="create-dbtable" class="span12">
+                                        
+                                        <div class="container">
+                                            <h4>Select Table</h4>
+                                            <input type="text" placeholder="Model Name">
+                                            <br>
+                                            <!--select DB-->
+                                            <select placeholder="select DB">
+                                              <option>select DB</option>
+                                              <option>2</option>
+                                              <option>3</option>
+                                              <option>4</option>
+                                              <option>5</option>
+                                            </select>
+                                            <p>choose Table</>
+                                            <textarea rows="3" class="txtarea">hris_ren_data
+hris_ren_trans
+hris_account
+hris_address
+                                            
+                                            </textarea>
+                                            <!--select primary key-->
+                                            <select placeholder="select DB">
+                                              <option>select primary key</option>
+                                              <option>2</option>
+                                              <option>3</option>
+                                              <option>4</option>
+                                              <option>5</option>
+                                            </select>
+                                            <!--select label key-->
+                                            <select placeholder="select DB">
+                                              <option>select label key</option>
+                                              <option>2</option>
+                                              <option>3</option>
+                                              <option>4</option>
+                                              <option>5</option>
+                                            </select>
+                                            <!--select label key - end-->
+                                            <div class="save">
+                                              <a href="" class="btn btn-xlarge btn-danger option-cancel">Cancel</a>
+                                              <a href="" class="btn  btn-xlarge btn-danger">Save</a>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                    <!--Create DB Table - end-->
+                                    
+                                    <!--Create Definition - start-->
+                                    <div id="create-definition" class="span12">
+                                        <textarea rows="3" class="txtarea">dummy form definition
+                                        
+                                        </textarea>                                            
+                                    </div>
+                                    <!--create Definition - end-->
+                                    </div>
+                                </div>
+                                <!--SQL TAB 1 - end-->
+                                
+                                <!--FS TAB 2- START-->
+                                <div id="tab-2" class="do">
+                                    <div class="container-fluid">
+                                        <!---->
+                                        
+                                        <!---->
+                                    </div>                    
+                                </div>
+                                <!--FS TAB 2- END-->
+                                
+                                <!--CAS TAB 3- START-->
+                                <div id="tab-2" class="do">
+                                    <div class="container-fluid">
+                                        <!---->
+                                        
+                                        <!---->
+                                    </div>                    
+                                </div>
+                                <!--CAS TAB 3- END-->
+                                
+                                <!--OAuth TAB 4- START-->
+                                <div id="tab-2" class="do">
+                                    <div class="container-fluid">
+                                        <!---->
+                                        
+                                        <!---->
+                                    </div>                    
+                                </div>
+                                <!--OAuth TAB 4- END-->
+                                
+                            </div>                                
+                        </div>
+                        <!--RIGHT COLUMN "CREATE MODEL" - END-->
+                    </div>
+                </div>
+                <!--container - end-->
+            </div>
+            <!--MODELS END-->
+    
+    
+    	</div>
+        <!--CONTENT OF MODULE TAB END-->
+    
+    </div>    
+    <!--TABS - END-->

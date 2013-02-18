@@ -1,0 +1,181 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8"
+"Content-Transfer-Encoding: 8bit"
+
+#. #########################################
+#. Labels for module: appRAD
+#. Source language: en
+#. Target language: en
+#. #########################################
+
+
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [appRad.portal.titleModuleList]
+msgid "Modules"
+msgstr "Modules"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [appRad.portal.titleInterfaceList]
+msgid "Interfaces"
+msgstr "Interfaces"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [appRad.portal.titleModelList]
+msgid "Models"
+msgstr "Models"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [appRad.portal.titleControllerList]
+msgid "Controllers"
+msgstr "Controllers"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [appRad.portal.titleViewList]
+msgid "Views"
+msgstr "Views"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [appRad.portal.titleListInstallFiles]
+msgid "Install Files"
+msgstr "Install Files"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [appRad.portal.labelwidget.title]
+msgid "Labels"
+msgstr "Labels"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [appRad.portal.labelwidget.Cancel]
+msgid "Cancel"
+msgstr "Cancel"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [appRad.portal.labelwidget.Delete]
+msgid "Delete"
+msgstr "Delete"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [appRad.portal.labelwidget.Save]
+msgid "Save"
+msgstr "Save"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [appRad.portal.labelwidget.Labels]
+msgid "(translators ignore this tag:[10]) Labels"
+msgstr "Labels"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [appRad.portal.labelwidget.Key]
+msgid "Key:"
+msgstr "Key:"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [appRad.portal.labelwidget.Label]
+msgid "Label:"
+msgstr "Label:"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [appRad.portal.labelwidget.Add]
+msgid "Add"
+msgstr "Add"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [appRad.portal.labelwidget.language]
+msgid "Language:"
+msgstr "Language:"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [appRad.portal.titlePageList]
+msgid "Pages"
+msgstr "Pages"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.chooseIconForModule]
+msgid "choose an icon for this module"
+msgstr "choose an icon for this module"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.addModule]
+msgid "Add Module"
+msgstr "Add Module"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.errorModuleNameInUse]
+msgid "error: name already in use"
+msgstr "error: name already in use"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.install]
+msgid "Install"
+msgstr "Install"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.models]
+msgid "(translators ignore this tag:[20]) Models"
+msgstr "Models"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.server]
+msgid "Server"
+msgstr "Server"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.titanium]
+msgid "Titanium"
+msgstr "Titanium"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.webui]
+msgid "Web UI"
+msgstr "Web UI"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.labels]
+msgid "(translators ignore this tag:[24]) Labels"
+msgstr "Labels"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.permissions]
+msgid "Permissions"
+msgstr "Permissions"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.toolTitle.install]
+msgid "These Tools are to help you manage the install files for this module"
+msgstr "These Tools are to help you manage the install files for this module"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.moduleName]
+msgid "Module Name"
+msgstr "Module Name"
+
