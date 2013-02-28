@@ -1,0 +1,43 @@
+<!-- Beginning moduleListWidget view definition -->
+<%
+///// NOTE:  on the server, EJS uses < %- to return unescaped strings
+/////        on the client, EJS uses < %== 
+// This is client side, so let's make displaying labels easier:
+// use:   L('[labelKey]')
+var L = function(key) { return AD.Lang.Labels.getLabelHTML(key); };
+%>
+<!--ADD MODULE - START-->
+<div id="add-module" class="container"><button type="button" id="btn-addmodule"class="btn right-align"><%== L('[apprad.portal.addModule]') %></button></div>
+<!--ADD MODULE - END-->
+
+<!-- Attach Carousel to this -->
+<div id="myCarousel"></div>
+
+<!--ADD MODULE - START-->
+<div class="add-option">
+    <!--CONTENT OF ADD OPTION - START-->
+    	<div class="row-fluid space-top space-bottom">
+        	<!--left - start-->
+        	<div id="choose-icon" class="span5">
+            	<img src="/appRAD/portal/images/module-icon.png" width="75" height="75" border="0">
+            </div>
+            <!--left - end-->
+            
+            <!--right - start-->
+            <div id="choose-icon-txt" class="span7">
+            	<p><%== L('[apprad.portal.chooseIconForModule]') %></p>
+            </div>
+            <!--right - end-->
+        </div>    
+    	<input id="module-addform-name" type="text" class="input-medium option-input" placeholder="[apprad.portal.moduleName]">
+        <div class="control-group error">
+            <label id="error-AddModule" class="control-label center-align" for="inputError"><%== L('[apprad.portal.errorModuleNameInUse]') %></label>
+        </div>
+        <div class="save center-align">
+            <button id="btn-addCancel" class="btn btn-medium option-cancel"><%== L('[site.button.Cancel]') %></button>
+            <button id="btn-addSubmit" class="btn  btn-medium btn-primary option-submit"><%== L('[site.button.Submit]') %></button>
+            <span id="addBusy" class="busy-icon">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </div> 
+    <!--CONTENT OF ADD OPTION - START-->                                  
+</div>    
+<!--ADD MODULE - END-->

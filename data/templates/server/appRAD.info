@@ -1,0 +1,4 @@
+// basic appRAD info for this module
+
+
+module.exports = [appRADInfo];   

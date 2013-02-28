@@ -1,0 +1,57 @@
+<!-- Beginning webuiLabelForm view definition -->
+<%
+///// NOTE:  on the server, EJS uses < %- to return unescaped strings
+/////        on the client  EJS uses < %== 
+// This is CLIENT SIDE, so let's make displaying labels easier:
+// use: < %==  L('[labelKey]') % >   // <-- note: there is no " " between %,>
+var L = function(key) { return AD.Lang.Labels.getLabelHTML(key); };
+
+//// Alternativly you can add these attributes:
+//   appdTitleKey="[label.key]"  for elements that have a title and you want 
+//                               the contents to be multilingual
+//   appLabelKey="[label.key]"   for elements whose contents (el.html()) 
+//                               should be the multilingual info
+
+var pL = function(prependText, key) {
+    // prepend the given text to the result of the label
+    var label = $(L(key)).prepend(prependText);
+    return $('<div>').append(label).html();
+}
+%>
+<div class="header-title"><h4><%== L('[apprad.portal.server.newapi]') %></h4></div>
+<!--LABELS WORKING AREA - START-->
+<div class="row-fluid"> 
+		<!--form - start-->
+        <div id="labels-form" class="span15 borders">
+            <!--CONTENTS OF LABELS HERE - START -->
+            <div class="control-group">
+                <label class="ctrl-label span3" for="resource">Resource Name:</label>
+                <div class="controls">
+                  <input type="text" data-bind="resource" class="span7">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="ctrl-label span3" for="action">Action:</label>
+                <div class="controls">
+                  <input type="text" data-bind="action" class="span7">
+                </div>
+            </div>    
+            <div class="control-group">
+                <label class="ctrl-label span3" for="url">Url:(optional)</label>
+                <div class="controls">
+                  <input type="text" data-bind="url" class="span7">
+                </div>
+            </div>                                 
+            <p class="text-error center-align">error msg area</p>
+            <!--save start-->
+            <div class="save right-align">
+                <div class="busyicon-inline margin-right10"></div>
+              <button id="btn-cancel" class="btn btn-small btn-primary option-cancel">Cancel</button>
+              <button id="btn-save" class="btn  btn-small btn-primary">Save</button>
+            </div>                                            
+            <!--save end-->                                                                        
+            <!--CONTENTS OF LABELS HERE - END -->                                
+        </div>
+        <!--form - end-->                                        
+</div>
+<!--LABELS WORKING AREA - START-->

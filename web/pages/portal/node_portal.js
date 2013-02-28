@@ -1,13 +1,11 @@
 /**
- * @class appRAD.client.pages
- * @parent appRAD.client
+ * @class appRAD.client.pages.Portal
+ * @parent appRAD.client.pages
  * 
  * ##appRAD client pages
  * 
  * appRAD client pages
  */
-//required to separate comment blocks for documentjs, please do not remove
-var __filler;
 
 
 //// Template Replace:
@@ -41,6 +39,12 @@ var portalPage = new AD.App.Interface({
     pathScripts: __dirname+'/scripts',
 */
     listWidgets: [ 
+                  'appdev_list_carousel',
+                  'appdev_list_select',
+                  'appdev_dropdown',
+                  'appdev_list_languagepicker',
+                  'appdev_codemirror',
+                  'appdev_option_twocolumn'
 // AppRAD: WIDGET DEPENDENCY //    
                  ]
     });
@@ -94,25 +98,21 @@ portalPage.setup = function(callback)
 
 
 
-/*
- 
+
  // if You need to do additional additions to the data being passed to your portal.ejs view
  // you can do that here:
  
 
-var step1 = function(req, res, next) {
+var additionalTemplateData = function(req, res, next) {
 	
-	var guid = req.aRAD.viewer.viewer_globalUserID;
-    
-
 	// data being passed to your template should be stored in req.aRAD.response.templateData
-	req.aRAD.response.templateData['token'] = guid;
+	req.aRAD.response.templateData['sql_dbname'] = AD.Defaults.dbName;
 	
-	// they can be accessed in your template as <%- data.token %>
+	// they can be accessed in your template as <%- data.sql_dbname %>
 
 	next();
 }
 
-portalPage.pageStack = [step1];  // make sure this gets called after our page/unitViewer gets loaded:
+portalPage.pageStack = [additionalTemplateData];  // make sure this gets called after our page/unitViewer gets loaded:
 
- */
+ 

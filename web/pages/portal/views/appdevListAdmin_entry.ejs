@@ -1,0 +1,23 @@
+<%
+///// NOTE:  on the server, EJS uses < %- to return unescaped strings
+/////        on the client  EJS uses < %== 
+// This is CLIENT, so let's make displaying labels easier:
+// use:   L('[labelKey]')
+var L = function(key) { return AD.Lang.Labels.getLabelHTML(key); };
+%>
+<!--IOS Start-->
+<div class="wrapper">
+    <div class="pane pane_left" style="display:none;">
+        <a class="img ios-delete icon-minus"></a>
+    </div>
+    <div class="hide pane pane_right">
+        <button  class="ios-buttons btn btn-danger"><%== L('[site.button.Delete]') %></button >
+    </div>
+    <div class="pane pane_center">
+        <div class="pane__content">
+            <a class='model-name' ><%== name %></a>
+        </div>
+    </div>
+</div>
+<!--IOS  End--> 
+    

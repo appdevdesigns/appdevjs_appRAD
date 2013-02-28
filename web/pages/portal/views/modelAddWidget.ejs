@@ -1,0 +1,78 @@
+<!-- Beginning modelAddWidget view definition -->
+<%
+///// NOTE:  on the server, EJS uses < %- to return unescaped strings
+/////        on the client  EJS uses < %== 
+// This is CLIENT SIDE, so let's make displaying labels easier:
+// use:   L('[labelKey]')
+var L = function(key) { return AD.Lang.Labels.getLabelHTML(key); };
+%>
+<div class="row-fluid admin">
+  <div id="tabs2">
+    <ul class="nav nav-tabs">
+      <li><a href="#addModel-SQL" data-toggle="tab">SQL</a></li>
+      <li><a href="#addModel-SQLMultilingual" data-toggle="tab">SQL-<%== L('[apprad.portal.model.tab.multilingual]') %></a></li>
+      <li><a href="#addModel-Service" data-toggle="tab"><%== L('[apprad.portal.model.tab.service]') %></a></li>
+<%
+//      <li><a href="#addModel-FS" data-toggle="tab">FS</a></li>
+//      <li><a href="#addModel-CAS" data-toggle="tab">CAS</a></li>
+//      <li><a href="#addModel-OAuth" data-toggle="tab">OAuth</a></li>
+%>
+    </ul>
+    
+    <div id="modelTabContent" class="tab-content">
+
+        <!--SQL TAB 1 - start-->
+        <div id="addModel-SQL" class="do tab-pane">
+            <div class="container-fluid">
+                <div id="modelSQLAddForm"></div>
+            </div>                    
+        </div>
+        <!--SQL TAB 1 - end-->
+        
+        
+        <!--SQL-MULTILINGUAL TAB 2 - start-->
+        <div id="addModel-SQLMultilingual" class="do tab-pane">
+            <div class="container-fluid">
+                <div id="modelSQLMultilingualAddForm"></div>
+            </div>                    
+        </div>
+        <!--SQL-MULTILINGUAL TAB 2 - end-->
+        
+        <!--FS TAB 2- START-->
+        <div id="addModel-FS" class="do tab-pane">
+            <div class="container-fluid">
+                <!---->
+                
+                <!---->
+            </div>                    
+        </div>
+        <!--FS TAB 2- END-->
+        
+        <!--CAS TAB 3- START-->
+        <div id="addModel-CAS" class="do tab-pane">
+            <div class="container-fluid">
+                <!---->
+                
+                <!---->
+            </div>                    
+        </div>
+        <!--CAS TAB 3- END-->
+        
+        <!--OAuth TAB 4- START-->
+        <div id="addModel-OAuth" class="do tab-pane">
+            <div class="container-fluid">
+                <!---->
+                
+                <!---->
+            </div>                    
+        </div>
+        <!--OAuth TAB 4- END-->
+        
+        <div id="addModel-Service" class="do tab-pane">
+            <div class="container-fluid">
+                <div id="modelServiceAddForm"></div>
+            </div>                   
+        </div>
+  	</div>
+  </div>
+</div>            

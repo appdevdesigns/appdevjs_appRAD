@@ -1,0 +1,84 @@
+<!-- Beginning webuiLabelForm view definition -->
+<%
+///// NOTE:  on the server, EJS uses < %- to return unescaped strings
+/////        on the client  EJS uses < %== 
+// This is CLIENT SIDE, so let's make displaying labels easier:
+// use: < %==  L('[labelKey]') % >   // <-- note: there is no " " between %,>
+var L = function(key) { return AD.Lang.Labels.getLabelHTML(key); };
+
+//// Alternativly you can add these attributes:
+//   appdTitleKey="[label.key]"  for elements that have a title and you want 
+//                               the contents to be multilingual
+//   appLabelKey="[label.key]"   for elements whose contents (el.html()) 
+//                               should be the multilingual info
+
+var pL = function(prependText, key) {
+    // prepend the given text to the result of the label
+    var label = $(L(key)).prepend(prependText);
+    return $('<div>').append(label).html();
+}
+%>
+<h4><%== L('[apprad.portal.webui.Labels]') %></h4>
+<p class="space-top"><%== L('[apprad.portal.webui.label.language]') %>: <span id="webui-labelForm-languagePicker" class="text-error"></span></p>
+<!--LABELS WORKING AREA - START-->
+<div class="row-fluid">
+        <!--header start-->
+        <div class="header borders span9 space-bottom">
+            
+            <div class="header-title" style="width:75%;" ><h4 style="float:left;" ><%== L('[apprad.portal.webui.labelsForPath]') %>:&nbsp;</h4><span id="webui-labelForm-labelPath" ></span></div>
+            <div class="add-delete" style="width:20%;" >
+                <div class="busyicon-inline"></div>
+                <a id="btn-del" class="icon-delete icon-minus"><%== pL('[-]:','[site.button.Delete]') %></a>
+                <a id="btn-done" class="ok hide"><p class="icon-ok"></p><%== L('[site.button.Done]') %></a>
+            </div>
+                                                                                                  
+        </div>
+        <!--header end--> 
+
+        <!--data - start-->
+        <div id="labels-data" class="span5">
+            
+            <!--CONTENTS OF LABELS HERE - START -->
+            <table id='webuiLabelForm-list' class="table table table-striped"  >
+                <tr>
+                    <td class="pane_left"><a class="img ios-delete icon-minus"></a></td>
+                    <td><a>[title]</a></td>
+                    <td><a>Title</a></td>
+                    <td class="pane_right" ><button  class="ios-buttons btn btn-danger"><%== L('[site.button.Delete]') %></button ></td>
+                </tr>
+
+
+            </table>
+            <!--CONTENTS OF LABELS HERE - END -->
+        </div> 
+        <!--data - end-->
+        
+        
+        <!--form - start-->
+        <div id="labels-form" class="span4 borders">
+            <!--CONTENTS OF LABELS HERE - START -->
+            <div class="control-group">
+                <label class="ctrl-label" for="key">key:</label>
+                <div class="controls">
+                  <input type="text" data-bind="label_key" class="span9">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="ctrl-label" for="label">label:</label>
+                <div class="controls">
+                  <input type="text" data-bind="label_label" class="span9">
+                </div>
+            </div>                                     
+            <p class="text-error center-align">error msg area</p>
+            <!--save start-->
+            <div class="save right-align">
+                <div class="busyicon-inline margin-right10"></div>
+              <button id="btn-cancel" class="btn btn-small btn-primaryt option-cancel">Cancel</button>
+              <button id="btn-save" class="btn  btn-small btn-primary">Save</button>
+            </div>                                            
+            <!--save end-->                                                                        
+            <!--CONTENTS OF LABELS HERE - END -->                                
+        </div>
+        <!--form - end-->                                        
+</div>
+<!--LABELS WORKING AREA - START-->

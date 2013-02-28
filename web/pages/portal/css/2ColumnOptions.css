@@ -1,0 +1,67 @@
+
+.column-left, .column-right {
+	margin:0 0 8px 0;
+	padding:5px 0 0 0;
+	width:99.7%;
+	border:#CCCCCC 1px solid;
+
+}
+
+.column-left ul{
+	margin-left:10px !important;
+
+}
+
+.vtscrl-bar {
+	height:300px;
+	overflow-x:hidden;
+	overflow-y:auto;
+
+
+}
+
+.busyicon-refresh {
+	float:left;
+	vertical-align:middle;
+	width:16px;
+	height:28px;
+	background-image:url(../images/busy-icon.gif);
+	background-position: center;
+	background-repeat:no-repeat;
+	
+}
+
+.add-entry{
+	display:none;
+	width:190px;
+	background-color:#FFFFFF !important;
+	z-index:3000;
+	position:absolute;
+	border: 1px solid #08C;
+	padding:8px 5px;
+	margin:5px 0 0 4.8%;
+
+}
+
+.delete-labels{
+	display:none;
+	width:190px;
+	background-color:#FFFFFF !important;
+	z-index:3000;
+	position:absolute;
+	border: 1px solid #B94A48;
+	padding:8px 5px;
+
+}
+
+.sql-createdb, .sql-definition {
+	text-align:center;
+	
+}
+
+.sql-form {
+	border: 1px solid #ddd;
+	border-top:none;
+	overflow:hidden;
+	
+}

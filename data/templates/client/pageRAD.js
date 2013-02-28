@@ -1,22 +1,18 @@
+//// Template Replace:
+//   [moduleName]     : the name of this page's module: (lowercase)
+//   [pageName]  : the name of this page :  (lowercase)
+//   [PageName]  : the name of this page :  (Uppercase)
 
 /**
  *  
- *  @class appRAD.client.pages.Portal.RADSetup
- *  @parent appRAD.client.pages.Portal
+ *  @class [moduleName].client.pages.[PageName].RADSetup
+ *  @parent [moduleName].client.pages.[PageName]
  *  
- *  appRAD generated setup script for the Portal Page container. 
+ *  appRAD generated setup script for the [PageName] Page container. 
  *
  *  The job of this code is to make sure the HTML DOM content required
- *  for the appRADPortalSetup() is generated before it is called.
+ *  for the [moduleName][PageName]Setup() is generated before it is called.
  */
-
-
-//// Template Replace:
-//   appRAD     : the name of this page's module: (lowercase)
-//   portal  : the name of this page :  (lowercase)
-//   Portal  : the name of this page :  (Uppercase)
-
-
 
 
 
@@ -24,12 +20,12 @@
 (function() {
 
     ////[appRad] --  setup object definitions here:
-    var appRADPortalRADSetup = function() {
+    var [moduleName][PageName]RADSetup = function() {
         // This will be called after all the javascript libraries are loaded
         // using the steal.js dependency manager.
         // 
         // Use this area to add any additional DOM setups that need to be in
-        // place before the appRADPortalSetup() is called.
+        // place before the [moduleName][PageName]Setup() is called.
         
         
         
@@ -54,25 +50,13 @@
         // usage:  AD.Viewer.hasPermission('canXlate');  // returns True/False
 
         
-        // Developers can see this:
-//        if (AD.Viewer.hasPermission('developer')) {
-            AD.Comm.Notification.subscribe('**', function(event,data){
-                
-                console.groupCollapsed('Event: ['+event+']');
-                console.log('data:');
-                console.log(data);
-                console.groupEnd();
-                
-            });
-//        }
-        
         // when our Initialization Process is complete, then pass control 
         // to the programmer's setup() function.
         $.when(initProcess).done(function () {
         
             // keep this last:
-            // publish a notification it's time to run appRADPortalSetup()
-            AD.Comm.Notification.publish("ad.appRAD.portal.setup", {});
+            // publish a notification it's time to run [moduleName][PageName]Setup()
+            AD.Comm.Notification.publish("ad.[moduleName].[pageName].setup", {});
             
             // note: since anyone can publish a key, we want to prevent 
             // running this a second time:
@@ -80,7 +64,7 @@
         });
         
     }
-    var subscriptionID = AD.Comm.Notification.subscribe('ad.appRAD.portal.radsetup',appRADPortalRADSetup);
+    var subscriptionID = AD.Comm.Notification.subscribe('ad.[moduleName].[pageName].radsetup',[moduleName][PageName]RADSetup);
 
 
     $(document).ready(function () {

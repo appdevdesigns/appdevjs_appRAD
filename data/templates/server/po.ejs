@@ -1,0 +1,19 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8"
+"Content-Transfer-Encoding: 8bit"
+
+#. #########################################
+#. Labels for module: <%- moduleKey %>
+#. Source language: <%- sourceLangCode %>
+#. Target language: <%- targetLangCode %>
+#. #########################################
+
+
+<% for (var i=0; i<labels.length; i++) { %>
+#. path: <%- labels[i]['label_path'] %>
+#. code: <%- targetLangCode %>
+#. key: <%- labels[i]['label_key'] %>
+msgid "<%- labels[i]['label_source'] %>"
+msgstr "<%- labels[i]['label_label'] %>"
+<% } %>

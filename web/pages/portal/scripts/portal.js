@@ -1,10 +1,7 @@
-//// Template Replace:
-//   appRAD     : the name of this page's module: (lowercase)
-//   portal  : the name of this page :  (lowercase)
-//   Portal  : the name of this page :  (Uppercase)
+
 /**
- * @class appRAD.client.pages.Portal
- * @parent appRAD.client.pages
+ * @class appRAD.client.pages.Portal.appRADPortalSetup
+ * @parent appRAD.client.pages.Portal
  * 
  *  The setup script for the portal Page container. 
  *
@@ -16,14 +13,46 @@
  */
 
 
+
+//// Template Replace:
+//   appRAD     : the name of this page's module: (lowercase)
+//   portal  : the name of this page :  (lowercase)
+//   Portal  : the name of this page :  (Uppercase)
+
+
 (function() {
 
 
 ////[appRad] --  setup object definitions here:
 var appRADPortalSetup = function (topic, data) {
 
-
+    //// Setup our Main Module Tabs widget here:
+    $('#myTab').tabs_module();
+    
     //// Setup Your Page Data/ Operation Here
+	$('#summary-block').module_info_widget();
+	$('#moduleListWidget').module_list_widget();
+	
+	//// Install Tab
+	$('#module-install').workarea_install();
+	
+	
+	$('#modelListWidget').model_list_widget();
+	$('#modelAddWidget').model_add_widget();
+	
+	
+	//// Setup Work Area: Web UI
+	$('#web-ui').workarea_webui();
+	
+	$('#server').workarea_server();
+	
+	$('#module-models').workarea_model();
+	
+	
+	
+	//// Setup Work Area: Labels
+	$('#labelListWidget').labels_label_list_widget();
+	$('#labels-translation-tool').labels_translation_list();
 	
 //// TODO: move this into a controller:
 //$('#myTab a').click(function (e) {

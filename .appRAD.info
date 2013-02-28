@@ -1,0 +1,15 @@
+// basic appRAD info for this module
+
+
+module.exports = {
+	"module": "appRAD",
+	"name": "appRAD",
+	"pathInfo": "/Users/codingMonkey/Sites/develop/appDev/modules/appRAD/.appRAD.info",
+	"iconPath": "/appRAD/portal/images/icon_module.png",
+	"labels": {
+		"installed": {
+			"/page/appRAD/portal": "/page/appRAD/portal"
+		}
+	},
+	"sqlTables": {}
+};   

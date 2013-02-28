@@ -1,0 +1,90 @@
+<!-- Beginning modelSQLMultilingualForm view definition -->
+<%
+///// NOTE:  on the server, EJS uses < %- to return unescaped strings
+/////        on the client  EJS uses < %== 
+// This is CLIENT SIDE, so let's make displaying labels easier:
+// use: < %==  L('[labelKey]') % >   // note there is no ';' at the end!
+var L = function(key) { return AD.Lang.Labels.getLabelHTML(key); };
+
+//// Alternatively you can add these attributes:
+//   appdTitleKey="[label.key]"  for elements that have a title and you want 
+//                               the contents to be multilingual
+//   appLabelKey="[label.key]"   for elements whose contents (el.html()) 
+//                               should be the multilingual info
+%>
+      <div class="row-fluid litspace-bottom">
+           <div class="span6 bg-color">
+                <h3 class="center-align"><a class="tab-sqlmulti-createdb" ><%== L('[apprad.portal.model.createFromTable]') %></a></h3>
+           </div>
+           <div class="span6 bg-color">
+                <h3 class="center-align"><a class="tab-sqlmulti-definition" ><%== L('[apprad.portal.model.createFromDefinition]') %></a></h3>
+           </div>
+      </div>
+    
+            
+      <!--links end-->
+            
+      <div class="row-fluid ">
+           <!--Create Definition - start-->
+           <div id="addModel-SQLMulti-Definition" class="span12">
+               <textarea rows="3" class="txtarea"></textarea>                                            
+           </div>
+           <!--create Definition - end-->
+           <!--create from DB Table - start--> 
+           <div id="addModel-SQLMulti-DBTable" class="span12">
+                    
+                    <div class="container span8">
+                        <h4><%== L('[apprad.portal.model.addwidget.sql.table.selectTable]') %></h4>
+                        <div class="control-group" style="margin-bottom:0;">
+                            <input type="text" placeholder="[apprad.portal.model.addwidget.sql.table.modelName]" data-bind='modelName' style="margin-bottom:3px;" >
+                        </div>
+
+                        <!--select DB-->
+                        <div class="control-group" style="margin-bottom:0;">
+                            <div id="sel-multi-selectDB" placeholder="[apprad.portal.model.addwidget.sql.table.selectDB]"></div>
+                        </div>
+                        
+                        <H5><%== L('[apprad.portal.model.multi.dataTable]') %></H5>
+                        <div class="well">
+                            <div class="control-group" style="margin-bottom:0;">
+                                <div id="sel-multi-dat-selectDBTable" placeholder="[apprad.portal.model.addwidget.sql.table.chooseTable]"></div>
+                            </div>
+                            
+                            <!--select primary key-->
+                            <div class="control-group" style="margin-bottom:0;">
+                                <div id="sel-multi-data-primaryKey" placeholder="[apprad.portal.model.addwidget.sql.table.selectPK]"></div>
+                            </div>
+                        
+                        </div>
+                        
+                        <H5><%== L('[apprad.portal.model.multi.transTable]') %></H5>
+                        <div class="well">
+                            <div class="control-group" style="margin-bottom:0;">
+                                <div id="sel-multi-trans-selectDBTable" placeholder="[apprad.portal.model.addwidget.sql.table.chooseTable]"></div>
+                            </div>
+                            <!--select label key-->
+                            <div class="control-group" style="margin-bottom:0;">
+                                <div id="sel-multi-labelKey" placeholder="[apprad.portal.model.addwidget.sql.table.selectLK]"> </div>
+                            </div>
+                            <!--select label key - end-->
+                        </div>
+                        
+                        
+                        <div style="width:225px;">
+                            <div class="control-group error">
+                                <label class="control-label center-align ADForm-msg-error" for="inputError">error msg area</label>
+                            </div>
+                                    
+                            <div class="control-group save right-align">
+                              <div class="busyicon-inline margin-right5"></div>
+                              <button id="btn-cancel" class="btn btn-xlarge btn-primary option-cancel ADForm-btn-cancel"><%== L('[site.button.Cancel]') %></button>
+                              <button id="btn-submit" class="btn  btn-xlarge btn-primary ADForm-btn-submit"><%== L('[site.button.Submit]') %></button>
+                            </div> 
+                        </div>                                           
+                    </div>
+                </div>
+                <!--Create DB Table - end-->                                    
+            </div>
+        </div>
+        <!--SQL TAB 1 - end-->        
+    </div>          

@@ -1,0 +1,77 @@
+<!-- Beginning modelAddWidget view definition -->
+<%
+///// NOTE:  on the server, EJS uses < %- to return unescaped strings
+/////        on the client  EJS uses < %== 
+// This is CLIENT SIDE, so let's make displaying labels easier:
+// use:   L('[labelKey]')
+var L = function(key) { return AD.Lang.Labels.getLabelHTML(key); };
+%>
+<div id="tab-text" class="container">
+     <h4><%- L('[apprad.portal.webui.title]') %></h4>
+</div>
+<!--LABELS WORKING AREA - START-->
+<div class="row-fluid"> 
+		<!--form - start-->
+        <div id="labels-form" class="span15 borders">
+            <!--CONTENTS OF LABELS HERE - START -->
+            <div class="control-group">
+                <label class="ctrl-label span3" for="resourceName">Resource Name:</label>
+                <div class="controls">
+                  <input type="text" data-bind="resourceName" class="span7">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="ctrl-label span3" for="labelKey">Label Key:</label>
+                <div class="controls">
+                  <input type="text" data-bind="labelKey" class="span7">
+                </div>
+            </div>    
+            <div class="control-group">
+                <label class="ctrl-label span3" for="primaryKey">Primary Key:</label>
+                <div class="controls">
+                  <input type="text" data-bind="primaryKey" class="span7">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="span3" for="create">Create:</label>
+                <!-- <div class="controls"> -->
+                  <input type="checkbox" class="span7" data-bind="publicLinks_create">
+                <!-- </div> -->
+            </div>
+            <div class="control-group">
+                <label class="span3" for="findAll">Find All:</label>
+                <!-- <div class="controls"> -->
+                  <input type="checkbox" class="span7" data-bind="publicLinks_findAll">
+                <!-- </div> -->
+            </div>
+            <div class="control-group">
+                <label class="span3" for="findOne">Find One:</label>
+                <div class="controls">
+                  <input type="checkbox" class="span7" data-bind="publicLinks_findOne">
+                </div>    
+            </div>
+            <div class="control-group">
+                <label class="span3" for="update">Update:</label>
+                <div class="controls">
+                  <input type="checkbox" class="span7" data-bind="publicLinks_update">
+                </div> 
+            </div>
+            <div class="control-group">
+                <label class="span3" for="destroy">Destroy:</label>
+                <div class="controls">
+                  <input type="checkbox" class="span7" data-bind="publicLinks_destroy">
+                </div>
+            </div>                        
+            <p class="text-error center-align">error msg area</p>
+            <!--save start-->
+            <div class="save right-align">
+                <div class="busyicon-inline margin-right10"></div>
+              <button id="btn-cancel" class="btn btn-small btn-primary option-cancel">Cancel</button>
+              <button id="btn-save" class="btn  btn-small btn-primary">Save</button>
+            </div>                                            
+            <!--save end-->                                                                        
+            <!--CONTENTS OF LABELS HERE - END -->                                
+        </div>
+        <!--form - end-->                                        
+</div>
+<!--LABELS WORKING AREA - START-->

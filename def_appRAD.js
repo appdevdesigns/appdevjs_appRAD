@@ -33,6 +33,17 @@ var __filler;
 var __filler;
 
 /**
+ * @class appRAD.client.pages
+ * @parent appRAD.client
+ * 
+ * ##appRAD client pages
+ * 
+ * appRAD client pages
+ */
+//required to separate comment blocks for documentjs, please do not remove
+var __filler;
+
+/**
  * @class appRAD.titanium
  * @parent appRAD
  * 
@@ -42,16 +53,16 @@ var __filler;
  */
 //required to separate comment blocks for documentjs, please do not remove
 var __filler;
+ 
 
-
-
-//Replace These Tags:
-//appRAD  : <-- the name of this module (lowercase)
-//AppRAD  : <-- the name of this module (uppercase)
 
 var log = AD.Util.Log;
 var $ = AD.jQuery;
 
+
+////
+//// AppRAD Module
+////
 
 var appRADModule = new AD.App.Module({
     nameModule: 'appRAD',

@@ -1,0 +1,52 @@
+<!-- Beginning appdevListAdmin view definition -->
+<%
+///// NOTE:  on the server, EJS uses < %- to return unescaped strings
+/////        on the client  EJS uses < %== 
+// This is CLIENT, so let's make displaying labels easier:
+// use:   L('[labelKey]')
+var L = function(key) { return AD.Lang.Labels.getLabelHTML(key); };
+var pL = function(prependText, key) {
+    // prepend the given text to the result of the label
+    var label = $(L(key)).prepend(prependText);
+    return $('<div>').append(label).html();
+}
+%>
+<!--header start-->
+<div class="header">
+    <div class="header-title"><h4 class="appdevListAdmin-title"></h4></div>
+    <div class="buttons add-delete">
+        <div class="busyicon-inline"></div>
+        <a id="btn-add" class="add-fldlist icon-plus"><%== pL('[+]:','[site.button.Add]') %></a>
+        <a id="btn-del" class="icon-delete icon-minus"><%== pL('[-]:','[site.button.Delete]') %></a>
+        <a id="btn-done" class="ok hide"><p class="icon-ok"></p><%== L('[site.button.Done]') %></a>
+        <a id="btn-edit" class="icon-edit"><%== L('[site.button.Edit]') %></a>
+    </div>
+</div>
+<!--header end--> 
+<!--appdevListAdmin - add-form  START -->
+<div id="appdevListAdmin-AddForm" class="left-box add">
+    <!-- Form Contents -->
+    <div id='add-form-items'>
+        <input type="text" class="span12 option-input" placeholder="[apprad.portal.webui.pages.add.name]">
+    </div>    
+    
+    <div class="control-group error">
+        <label id="appdevListAdmin-error" class="control-label center-align" for="inputError">error msg area</label>
+    </div>
+    
+    <div class="save right-align">
+        <div class="busyicon-inline"></div>
+        <button id='add-form-btn-cancel' class="option-cancel btn btn-small btn-primary option-cancel"><%== L('[site.button.Cancel]') %></button>
+        <button id='add-form-btn-submit' class="option-save btn  btn-small btn-primary "><%== L('[site.button.Submit]') %></button>
+    </div> 
+</div>
+<!--appdevListAdmin - add-form  END--> 
+                           
+<!--List Content Here -->
+<div class="adminlist-entry">
+    <ul class="admin-list">
+        
+    </ul> 
+</div> 
+                     
+<!-- Ending of appdevListAdmin view definition -->
