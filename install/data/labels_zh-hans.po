@@ -6,446 +6,446 @@ msgstr ""
 #. #########################################
 #. Labels for module: appRAD
 #. Source language: en
-#. Target language: en
+#. Target language: zh-hans
 #. #########################################
 
 
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [appRad.portal.titleModuleList]
 msgid "Modules"
-msgstr "Modules"
+msgstr "[zh-hans]Modules"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [appRad.portal.titleInterfaceList]
 msgid "Interfaces"
-msgstr "Interfaces"
+msgstr "[zh-hans]Interfaces"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [appRad.portal.titleModelList]
 msgid "Models"
-msgstr "Models"
+msgstr "[zh-hans]Models"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [appRad.portal.titleControllerList]
 msgid "Controllers"
-msgstr "Controllers"
+msgstr "[zh-hans]Controllers"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [appRad.portal.titleViewList]
 msgid "Views"
-msgstr "Views"
+msgstr "[zh-hans]Views"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [appRad.portal.titleListInstallFiles]
 msgid "Install Files"
-msgstr "Install Files"
+msgstr "[zh-hans]:Install Files"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [appRad.portal.labelwidget.title]
 msgid "Labels"
-msgstr "Labels"
+msgstr "[zh-hans]:Labels"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [appRad.portal.labelwidget.Cancel]
 msgid "Cancel"
-msgstr "Cancel"
+msgstr "[zh-hans]:Cancel"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [appRad.portal.labelwidget.Delete]
 msgid "Delete"
-msgstr "Delete"
+msgstr "[zh-hans]:Delete"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [appRad.portal.labelwidget.Save]
 msgid "Save"
-msgstr "Save"
+msgstr "[zh-hans]:Save"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [appRad.portal.labelwidget.Labels]
 msgid "(translators ignore this tag:[10]) Labels"
-msgstr "Labels"
+msgstr "[zh-hans]:Labels"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [appRad.portal.labelwidget.Key]
 msgid "Key:"
-msgstr "Key:"
+msgstr "[zh-hans]:Key:"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [appRad.portal.labelwidget.Label]
 msgid "Label:"
-msgstr "Label:"
+msgstr "[zh-hans]:Label:"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [appRad.portal.labelwidget.Add]
 msgid "Add"
-msgstr "Add"
+msgstr "[zh-hans]:Add"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [appRad.portal.labelwidget.language]
 msgid "Language:"
-msgstr "Language:"
+msgstr "[zh-hans]:Language:"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [appRad.portal.titlePageList]
 msgid "Pages"
-msgstr "Pages"
+msgstr "[zh-hans]:Pages"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.chooseIconForModule]
 msgid "choose an icon for this module"
-msgstr "choose an icon for this module"
+msgstr "[zh-hans]:choose an icon for this module"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.addModule]
 msgid "Add Module"
-msgstr "Add Module"
+msgstr "[zh-hans]:Add Module"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.errorModuleNameInUse]
 msgid "error: name already in use"
-msgstr "error: name already in use"
+msgstr "[zh-hans]:error: name already in use"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.install]
 msgid "Install"
-msgstr "Install"
+msgstr "[zh-hans]:Install"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.models]
-msgid "(translators ignore this tag:[20]) Models"
-msgstr "Models"
+msgid "Models"
+msgstr "[zh-hans]:Models"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.server]
 msgid "Server"
-msgstr "Server"
+msgstr "[zh-hans]:Server"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.titanium]
 msgid "Titanium"
-msgstr "Titanium"
+msgstr "[zh-hans]:Titanium"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.webui]
 msgid "Web UI"
-msgstr "Web UI"
+msgstr "[zh-hans]:Web UI"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.labels]
-msgid "(translators ignore this tag:[24]) Labels"
-msgstr "Labels"
+msgid "Labels"
+msgstr "[zh-hans]:Labels"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.permissions]
 msgid "Permissions"
-msgstr "Permissions"
+msgstr "[zh-hans]:Permissions"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.toolTitle.install]
 msgid "These Tools are to help you manage the install files for this module"
-msgstr "These Tools are to help you manage the install files for this module"
+msgstr "[zh-hans]:These Tools are to help you manage the install files for this module"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.moduleName]
 msgid "Module Name"
-msgstr "Module Name"
+msgstr "[zh-hans]:Module Name"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [appRad.portal.model.list.title]
-msgid "(translators ignore this tag:[28]) Models"
-msgstr "Models"
+msgid "Models"
+msgstr "[zh-hans]:Models"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.model.addwidget.title]
 msgid "Create a Model"
-msgstr "Create a Model"
+msgstr "[zh-hans]:Create a Model"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.model.createFromTable]
 msgid "Create From Table"
-msgstr "Create From Table"
+msgstr "[zh-hans]:Create From Table"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.model.createFromDefinition]
 msgid "Create From Definition"
-msgstr "Create From Definition"
+msgstr "[zh-hans]:Create From Definition"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.model.addwidget.sql.table.selectTable]
 msgid "Select Table"
-msgstr "Select Table"
+msgstr "[zh-hans]:Select Table"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.model.addwidget.sql.table.modelName]
 msgid "Model Name"
-msgstr "Model Name"
+msgstr "[zh-hans]:Model Name"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.model.addwidget.sql.table.selectDB]
 msgid "Select DB"
-msgstr "Select DB"
+msgstr "[zh-hans]:Select DB"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.model.addwidget.sql.table.chooseTable]
 msgid "Choose Table"
-msgstr "Choose Table"
+msgstr "[zh-hans]:Choose Table"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.model.addwidget.sql.table.selectPK]
 msgid "Select Primary Key"
-msgstr "Select Primary Key"
+msgstr "[zh-hans]:Select Primary Key"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.model.addwidget.sql.table.selectLK]
 msgid "Select Label Field"
-msgstr "Select Label Field"
+msgstr "[zh-hans]:Select Label Field"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.model.tab.service]
 msgid "Service"
-msgstr "Service"
+msgstr "[zh-hans]:Service"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.webui.Pages]
-msgid "(translators ignore this tag:[39]) Pages"
-msgstr "Pages"
+msgid "Pages"
+msgstr "[zh-hans]:Pages"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.webui.Widgets]
 msgid "Widgets"
-msgstr "Widgets"
+msgstr "[zh-hans]:Widgets"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.webui.Labels]
-msgid "(translators ignore this tag:[41]) Labels"
-msgstr "Labels"
+msgid "Labels"
+msgstr "[zh-hans]:Labels"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.webui.title.Pages]
 msgid "Create a new Web Page for this Module"
-msgstr "Create a new Web Page for this Module"
+msgstr "[zh-hans]:Create a new Web Page for this Module"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.webui.title]
 msgid "Use this tool to help you create and manage the resources for a Web Page"
-msgstr "Use this tool to help you create and manage the resources for a Web Page"
+msgstr "[zh-hans]:Use this tool to help you create and manage the resources for a Web Page"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.webui.title.Widgets]
 msgid "Create a reusable Widget for this Module"
-msgstr "Create a reusable Widget for this Module"
+msgstr "[zh-hans]:Create a reusable Widget for this Module"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.webui.title.Labels]
 msgid "Use this form to add Labels to a Module->Page"
-msgstr "Use this form to add Labels to a Module->Page"
+msgstr "[zh-hans]:Use this form to add Labels to a Module->Page"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.webui.pages.add.name]
 msgid "Page Name"
-msgstr "Page Name"
+msgstr "[zh-hans]:Page Name"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.webui.label.language]
 msgid "language"
-msgstr "language"
+msgstr "[zh-hans]:language"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.webui.labelsForPath]
 msgid "Labels for path"
-msgstr "Labels for path"
+msgstr "[zh-hans]:Labels for path"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.install.sql.includedTables]
 msgid "Tables to include:"
-msgstr "Tables to include:"
+msgstr "[zh-hans]:Tables to include:"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.install.sql.allTables]
 msgid "All DB Tables:"
-msgstr "All DB Tables:"
+msgstr "[zh-hans]:All DB Tables:"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.install.sql.instructions]
 msgid "refresh the SQL dump to generate the DB on install"
-msgstr "refresh the SQL dump to generate the DB on install"
+msgstr "[zh-hans]:refresh the SQL dump to generate the DB on install"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.install.sql.Title]
 msgid "SQL Setup File"
-msgstr "SQL Setup File"
+msgstr "[zh-hans]:SQL Setup File"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.install.installation.LabelInstructions]
 msgid "refresh the .po files used to initialize the labels for this module."
-msgstr "refresh the .po files used to initialize the labels for this module."
+msgstr "[zh-hans]:refresh the .po files used to initialize the labels for this module."
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.install.installation.LabelFiles]
 msgid "Label Files"
-msgstr "Label Files"
+msgstr "[zh-hans]:Label Files"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [appRad.portal.install.selectedLang]
 msgid "Selected Paths"
-msgstr "Selected Paths"
+msgstr "[zh-hans]:Selected Languages"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [appRad.portal.install.availLang]
 msgid "Label Paths (sets)"
-msgstr "Label Paths (sets)"
+msgstr "[zh-hans]:Installed Languages"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.install.Files]
 msgid "Files"
-msgstr "Files"
+msgstr "[zh-hans]:Files"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.install.installation.instructions]
-msgid "(translators ignore this tag:[58]) These Tools are to help you manage the install files for this module"
-msgstr "These Tools are to help you manage the install files for this module"
+msgid "These Tools are to help you manage the install files for this module"
+msgstr "[zh-hans]:These Tools are to help you manage the install files for this module"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.install.revisions]
 msgid "Revisions"
-msgstr "Revisions"
+msgstr "[zh-hans]:Revisions"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.install.installation]
 msgid "Installation"
-msgstr "Installation"
+msgstr "[zh-hans]:Installation"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [appRad.portal.labels.saved]
 msgid "saved"
-msgstr "saved"
+msgstr "[zh-hans]:saved"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.labels.translation.title]
 msgid "labels to translate"
-msgstr "labels to translate"
+msgstr "[zh-hans]:labels to translate"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.labels.language.destination]
 msgid "destination"
-msgstr "destination"
+msgstr "[zh-hans]:destination"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.labels.language.source]
 msgid "source"
-msgstr "source"
+msgstr "[zh-hans]:source"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.labels.label.add.name]
 msgid "label path"
-msgstr "label path"
+msgstr "[zh-hans]:label path"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.label.Labels]
-msgid "(translators ignore this tag:[66]) Labels"
-msgstr "Labels"
+msgid "Labels"
+msgstr "[zh-hans]:Labels"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.labels.title]
 msgid "This tool is to help you translate and manage any labels associated with this Module."
-msgstr "This tool is to help you translate and manage any labels associated with this Module."
+msgstr "[zh-hans]:This tool is to help you translate and manage any labels associated with this Module."
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.webui.views.add.name]
 msgid "View Name"
-msgstr "View Name"
+msgstr "[zh-hans]:View Name"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.webui.controllers.add.name]
 msgid "Controller Name"
-msgstr "Controller Name"
+msgstr "[zh-hans]:Controller Name"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.webui.controllers]
-msgid "(translators ignore this tag:[70]) Controllers"
-msgstr "Controllers"
+msgid "Controllers"
+msgstr "[zh-hans]:Controllers"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [apprad.portal.webui.views]
-msgid "(translators ignore this tag:[71]) Views"
-msgstr "Views"
+msgid "Views"
+msgstr "[zh-hans]:Views"
 
 #. path: /page/appRAD/portal
-#. code: en
+#. code: zh-hans
 #. key: [appRad.portal.error.Required]
 msgid "required"
-msgstr "required"
+msgstr "[zh-hans]:required"
 
