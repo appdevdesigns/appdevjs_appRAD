@@ -51,7 +51,7 @@
                     customButtons: [
                         {
                             buttonClass: 'icon-upload',
-                            buttonName: '[apprad.install.files.import]',
+                            buttonName: '[site.button.Import]',
                             buttonHandler: function(listSelected){
                                 
                                 // This is the import routine.

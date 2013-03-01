@@ -181,15 +181,93 @@ msgstr "Module Name"
 
 #. path: /page/appRAD/portal
 #. code: en
-#. key: [appRad.portal.model.list.title]
-msgid "(translators ignore this tag:[28]) Models"
+#. key: [apprad.portal.install.installation]
+msgid "Installation"
+msgstr "Installation"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.install.installation.instructions]
+msgid "Manage the files needed to install this Application."
+msgstr "Manage the files needed to install this Application."
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.install.sql.Title]
+msgid "SQL Install"
+msgstr "SQL Install"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.install.sql.instructions]
+msgid "refresh the SQL dump to generate the DB on install."
+msgstr "refresh the SQL dump to generate the DB on install."
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.install.sql.allTables]
+msgid "All Tables"
+msgstr "All Tables"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.install.sql.selectedTables]
+msgid "Selected Tables"
+msgstr "Selected Tables"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.install.installation.LabelFiles]
+msgid "Label Files"
+msgstr "Label Files"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.install.installation.LabelInstructions]
+msgid "refresh the .po files used to initialize the labels for this application."
+msgstr "refresh the .po files used to initialize the labels for this application."
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [appRad.portal.install.availLang]
+msgid "Application's Label Paths:"
+msgstr "Application's Label Paths:"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [appRad.portal.install.selectedLang]
+msgid "Selected Paths"
+msgstr "Selected Paths"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.install.revisions]
+msgid "Revisions"
+msgstr "Revisions"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.model.title]
+msgid "Create new Model objects for this application."
+msgstr "Create new Model objects for this application."
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.model.list.title]
+msgid "(translators ignore this tag:[40]) Models"
 msgstr "Models"
 
 #. path: /page/appRAD/portal
 #. code: en
-#. key: [apprad.portal.model.addwidget.title]
-msgid "Create a Model"
-msgstr "Create a Model"
+#. key: [apprad.portal.model.tab.multilingual]
+msgid "Multilingual"
+msgstr "Multilingual"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.model.tab.service]
+msgid "Service"
+msgstr "Service"
 
 #. path: /page/appRAD/portal
 #. code: en
@@ -200,55 +278,151 @@ msgstr "Create From Table"
 #. path: /page/appRAD/portal
 #. code: en
 #. key: [apprad.portal.model.createFromDefinition]
-msgid "Create From Definition"
-msgstr "Create From Definition"
+msgid "Define Table"
+msgstr "Define Table"
 
 #. path: /page/appRAD/portal
 #. code: en
 #. key: [apprad.portal.model.addwidget.sql.table.selectTable]
-msgid "Select Table"
-msgstr "Select Table"
+msgid "select table"
+msgstr "select table"
 
 #. path: /page/appRAD/portal
 #. code: en
 #. key: [apprad.portal.model.addwidget.sql.table.modelName]
-msgid "Model Name"
-msgstr "Model Name"
+msgid "model name"
+msgstr "model name"
 
 #. path: /page/appRAD/portal
 #. code: en
 #. key: [apprad.portal.model.addwidget.sql.table.selectDB]
-msgid "Select DB"
-msgstr "Select DB"
+msgid "select DB"
+msgstr "select DB"
 
 #. path: /page/appRAD/portal
 #. code: en
 #. key: [apprad.portal.model.addwidget.sql.table.chooseTable]
-msgid "Choose Table"
-msgstr "Choose Table"
+msgid "choose table"
+msgstr "choose table"
 
 #. path: /page/appRAD/portal
 #. code: en
 #. key: [apprad.portal.model.addwidget.sql.table.selectPK]
-msgid "Select Primary Key"
-msgstr "Select Primary Key"
+msgid "select primary key"
+msgstr "select primary key"
 
 #. path: /page/appRAD/portal
 #. code: en
 #. key: [apprad.portal.model.addwidget.sql.table.selectLK]
-msgid "Select Label Field"
-msgstr "Select Label Field"
+msgid "select a default label field"
+msgstr "select a default label field"
 
 #. path: /page/appRAD/portal
 #. code: en
-#. key: [apprad.portal.model.tab.service]
-msgid "Service"
-msgstr "Service"
+#. key: [apprad.portal.model.multi.dataTable]
+msgid "Data Table"
+msgstr "Data Table"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.model.multi.transTable]
+msgid "Translation Table"
+msgstr "Translation Table"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.model.addwidget.sql.table.chooseDataTable]
+msgid "choose data table"
+msgstr "choose data table"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.model.addwidget.sql.table.chooseTransTable]
+msgid "choose trans table"
+msgstr "choose trans table"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.server.title]
+msgid "Manage the Server side scripts for this application."
+msgstr "Manage the Server side scripts for this application."
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.server.Api]
+msgid "API"
+msgstr "API"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.server.ModelUrls]
+msgid "Model URL"
+msgstr "Model URL"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.server.Generic]
+msgid "Generic"
+msgstr "Generic"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.server.title.Api]
+msgid "API scripts to implement this application's web services."
+msgstr "API scripts to implement this application's web services."
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.server.title.ModelUrls]
+msgid "Create custom Model URIs."
+msgstr "Create custom Model URIs."
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.server.title.ModuleApi]
+msgid "Implement notification and messaging services for the server-side applications."
+msgstr "Implement notification and messaging services for the server-side applications."
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.server.title.Generic]
+msgid "Server side web service interfaces."
+msgstr "Server side web service interfaces."
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.server.ServerApi]
+msgid "Services"
+msgstr "Services"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.server.api.add.name]
+msgid "service name"
+msgstr "service name"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.server.ModuleApi]
+msgid "Application Services"
+msgstr "Application Services"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.server.newapi]
+msgid "New Service"
+msgstr "New Service"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.webui.title]
+msgid "Manage Resources for HTML User Interfaces"
+msgstr "Manage Resources for HTML User Interfaces"
 
 #. path: /page/appRAD/portal
 #. code: en
 #. key: [apprad.portal.webui.Pages]
-msgid "(translators ignore this tag:[39]) Pages"
+msgid "(translators ignore this tag:[68]) Pages"
 msgstr "Pages"
 
 #. path: /page/appRAD/portal
@@ -260,44 +434,50 @@ msgstr "Widgets"
 #. path: /page/appRAD/portal
 #. code: en
 #. key: [apprad.portal.webui.Labels]
-msgid "(translators ignore this tag:[41]) Labels"
+msgid "(translators ignore this tag:[70]) Labels"
 msgstr "Labels"
 
 #. path: /page/appRAD/portal
 #. code: en
 #. key: [apprad.portal.webui.title.Pages]
-msgid "Create a new Web Page for this Module"
-msgstr "Create a new Web Page for this Module"
+msgid "Create and Manage one or more pages for this application."
+msgstr "Create and Manage one or more pages for this application."
 
 #. path: /page/appRAD/portal
 #. code: en
-#. key: [apprad.portal.webui.title]
-msgid "Use this tool to help you create and manage the resources for a Web Page"
-msgstr "Use this tool to help you create and manage the resources for a Web Page"
+#. key: [apprad.portal.webui.views]
+msgid "(translators ignore this tag:[72]) Views"
+msgstr "Views"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.webui.views.add.name]
+msgid "view name"
+msgstr "view name"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.webui.controllers]
+msgid "(translators ignore this tag:[74]) Controllers"
+msgstr "Controllers"
+
+#. path: /page/appRAD/portal
+#. code: en
+#. key: [apprad.portal.webui.controllers.add.name]
+msgid "controller name"
+msgstr "controller name"
 
 #. path: /page/appRAD/portal
 #. code: en
 #. key: [apprad.portal.webui.title.Widgets]
-msgid "Create a reusable Widget for this Module"
-msgstr "Create a reusable Widget for this Module"
-
-#. path: /page/appRAD/portal
-#. code: en
-#. key: [apprad.portal.webui.title.Labels]
-msgid "Use this form to add Labels to a Module->Page"
-msgstr "Use this form to add Labels to a Module->Page"
-
-#. path: /page/appRAD/portal
-#. code: en
-#. key: [apprad.portal.webui.pages.add.name]
-msgid "Page Name"
-msgstr "Page Name"
+msgid "Create shareable widgets that other applications can use."
+msgstr "Create shareable widgets that other applications can use."
 
 #. path: /page/appRAD/portal
 #. code: en
 #. key: [apprad.portal.webui.label.language]
-msgid "language"
-msgstr "language"
+msgid "working language"
+msgstr "working language"
 
 #. path: /page/appRAD/portal
 #. code: en
@@ -307,51 +487,45 @@ msgstr "Labels for path"
 
 #. path: /page/appRAD/portal
 #. code: en
-#. key: [apprad.portal.install.sql.includedTables]
-msgid "Tables to include:"
-msgstr "Tables to include:"
+#. key: [apprad.portal.labels.title]
+msgid "Manage all labels associated with this application's paths."
+msgstr "Manage all labels associated with this application's paths."
 
 #. path: /page/appRAD/portal
 #. code: en
-#. key: [apprad.portal.install.sql.allTables]
-msgid "All DB Tables:"
-msgstr "All DB Tables:"
+#. key: [apprad.portal.labels.language.source]
+msgid "Source Language"
+msgstr "Source Language"
 
 #. path: /page/appRAD/portal
 #. code: en
-#. key: [apprad.portal.install.sql.instructions]
-msgid "refresh the SQL dump to generate the DB on install"
-msgstr "refresh the SQL dump to generate the DB on install"
+#. key: [apprad.portal.labels.language.destination]
+msgid "Editing Language"
+msgstr "Editing Language"
 
 #. path: /page/appRAD/portal
 #. code: en
-#. key: [apprad.portal.install.sql.Title]
-msgid "SQL Setup File"
-msgstr "SQL Setup File"
+#. key: [apprad.portal.labels.translation.title]
+msgid "(translators ignore this tag:[82]) Labels"
+msgstr "Labels"
 
 #. path: /page/appRAD/portal
 #. code: en
-#. key: [apprad.portal.install.installation.LabelInstructions]
-msgid "refresh the .po files used to initialize the labels for this module."
-msgstr "refresh the .po files used to initialize the labels for this module."
+#. key: [apprad.portal.label.Labels]
+msgid "Label Paths"
+msgstr "Label Paths"
 
 #. path: /page/appRAD/portal
 #. code: en
-#. key: [apprad.portal.install.installation.LabelFiles]
-msgid "Label Files"
+#. key:  [apprad.portal.install.installation.LabelFiles]
+msgid "(translators ignore this tag:[84]) Label Files"
 msgstr "Label Files"
 
 #. path: /page/appRAD/portal
 #. code: en
-#. key: [appRad.portal.install.selectedLang]
-msgid "Selected Paths"
-msgstr "Selected Paths"
-
-#. path: /page/appRAD/portal
-#. code: en
-#. key: [appRad.portal.install.availLang]
-msgid "Label Paths (sets)"
-msgstr "Label Paths (sets)"
+#. key:     [apprad.portal.install.installation]
+msgid "(translators ignore this tag:[85]) Installation"
+msgstr "Installation"
 
 #. path: /page/appRAD/portal
 #. code: en
@@ -361,91 +535,13 @@ msgstr "Files"
 
 #. path: /page/appRAD/portal
 #. code: en
-#. key: [apprad.portal.install.installation.instructions]
-msgid "(translators ignore this tag:[58]) These Tools are to help you manage the install files for this module"
-msgstr "These Tools are to help you manage the install files for this module"
+#. key: [apprad.install.files.import]
+msgid "import"
+msgstr "import"
 
 #. path: /page/appRAD/portal
 #. code: en
-#. key: [apprad.portal.install.revisions]
-msgid "Revisions"
-msgstr "Revisions"
-
-#. path: /page/appRAD/portal
-#. code: en
-#. key: [apprad.portal.install.installation]
-msgid "Installation"
-msgstr "Installation"
-
-#. path: /page/appRAD/portal
-#. code: en
-#. key: [appRad.portal.labels.saved]
-msgid "saved"
-msgstr "saved"
-
-#. path: /page/appRAD/portal
-#. code: en
-#. key: [apprad.portal.labels.translation.title]
-msgid "labels to translate"
-msgstr "labels to translate"
-
-#. path: /page/appRAD/portal
-#. code: en
-#. key: [apprad.portal.labels.language.destination]
-msgid "destination"
-msgstr "destination"
-
-#. path: /page/appRAD/portal
-#. code: en
-#. key: [apprad.portal.labels.language.source]
-msgid "source"
-msgstr "source"
-
-#. path: /page/appRAD/portal
-#. code: en
-#. key: [apprad.portal.labels.label.add.name]
-msgid "label path"
-msgstr "label path"
-
-#. path: /page/appRAD/portal
-#. code: en
-#. key: [apprad.portal.label.Labels]
-msgid "(translators ignore this tag:[66]) Labels"
-msgstr "Labels"
-
-#. path: /page/appRAD/portal
-#. code: en
-#. key: [apprad.portal.labels.title]
-msgid "This tool is to help you translate and manage any labels associated with this Module."
-msgstr "This tool is to help you translate and manage any labels associated with this Module."
-
-#. path: /page/appRAD/portal
-#. code: en
-#. key: [apprad.portal.webui.views.add.name]
-msgid "View Name"
-msgstr "View Name"
-
-#. path: /page/appRAD/portal
-#. code: en
-#. key: [apprad.portal.webui.controllers.add.name]
-msgid "Controller Name"
-msgstr "Controller Name"
-
-#. path: /page/appRAD/portal
-#. code: en
-#. key: [apprad.portal.webui.controllers]
-msgid "(translators ignore this tag:[70]) Controllers"
-msgstr "Controllers"
-
-#. path: /page/appRAD/portal
-#. code: en
-#. key: [apprad.portal.webui.views]
-msgid "(translators ignore this tag:[71]) Views"
-msgstr "Views"
-
-#. path: /page/appRAD/portal
-#. code: en
-#. key: [appRad.portal.error.Required]
-msgid "required"
-msgstr "required"
+#. key: [apprad.portal.webui.title.Labels]
+msgid "Manage the Labels for the selected Page."
+msgstr "Manage the Labels for the selected Page."
 
