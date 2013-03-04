@@ -229,7 +229,7 @@
                             
                             // Hmmmm... found a dest label that !exists in source lang
                             items[destLabel.label_key] = {
-                                    key:destLabel.label_key,
+                                    key:self.prepKey(destLabel.label_key),
                                     sourceText:'--',
                                     destText: destLabel.label_label,
                                     model: destLabel
