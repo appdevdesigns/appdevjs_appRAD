@@ -18,6 +18,10 @@
         id:'[primaryKey]',
         labelKey:'[labelKey]',
         _isMultilingual:false,
+        _relationships:{
+            belongs_to:[], // array of Model Names: ['Attributeset', 'site.Viewer', ... ]
+            has_many:[]    // array of Model Names
+            },
         //connectionType:'server', // optional field
         cache:false
     };

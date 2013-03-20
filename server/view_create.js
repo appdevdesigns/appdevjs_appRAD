@@ -89,7 +89,7 @@ var initData = function (req, res, next) {
 
 //templateToolView.saveValues(req, listTags);
     // now create the templates:
-    var templateDone = templateTool.createTemplates(listTags);
+    var templateDone = templateToolView.createTemplates(listTags);
     $.when(templateDone)
         .then(function(data){
             
