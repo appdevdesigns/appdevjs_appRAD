@@ -205,7 +205,7 @@ var templateTool = new TemplateTools({
 var moduleStack = [
         AD.App.Page.serviceStack,	// authenticates viewer, and prepares req.aRAD obj.
         hasPermission,      		// make sure we have permission to access this
-        gatherList, 				// get a list of all moduels
+        gatherList, 				// get a list of all modules
         details,					// get the module details ...
         addActions					// for each result, package them with their HATEOS actions
     ];
