@@ -68,8 +68,10 @@ var getListLabelPaths = function (req, res, next) {
     var data = appRADInfo.data();
     
     var list = [];
-    for (var i in data.labels.installed) {
-            list.push( {id:i, path:data.labels.installed[i]});
+    if (data.labels !== undefined) {
+        for (var i in data.labels.installed) {
+                list.push( {id:i, path:data.labels.installed[i]});
+        }
     }
     req.aRAD.listPaths = list;
     
