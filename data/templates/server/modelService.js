@@ -1,9 +1,9 @@
 
 /**
- * @class [moduleName].server.models.[modelName]
+ * @class [moduleName].server.models.[ResourceName]
  * @parent [moduleName].server.models
  * 
- *  This is an object to manage the interaction with the [module].[modelName]s service.
+ *  This is an object to manage the interaction with the [module].[ResourceName]s service.
  */
 
 
