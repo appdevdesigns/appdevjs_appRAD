@@ -6,18 +6,20 @@
 var L = function(key) { return AD.Lang.Labels.getLabelHTML(key); };
 %>
 <!--IOS Start-->
-<div class="wrapper">
-    <div class="pane pane_left" style="display:none;">
-        <a class="img ios-delete icon-minus"></a>
-    </div>
-    <div class="hide pane pane_right">
-        <button  class="ios-buttons btn btn-danger"><%== L('[site.button.Delete]') %></button >
-    </div>
-    <div class="pane pane_center">
-        <div class="pane__content">
-            <a class='model-name' ><%== name %></a>
+<a>
+    <div class="wrapper">
+        <div class="pane pane_left" style="display:none;">
+            <span class="img ios-delete icon-minus"></span>
+        </div>
+        <div class="hide pane pane_right">
+            <button  class="ios-buttons btn btn-danger"><%== L('[site.button.Delete]') %></button >
+        </div>
+        <div class="pane pane_center">
+            <div class="pane__content">
+                <span class='model-name' ><%== name %></span>
+            </div>
         </div>
     </div>
-</div>
+</a>
 <!--IOS  End--> 
     

@@ -145,9 +145,7 @@ ul.admin-list li {
 }
 
 ul.admin-list li a:hover{
-	color:#005580;
-		
-
+	color:#005580 !important;
 }
 
 /*ADMIN LIST ENTRY END*/

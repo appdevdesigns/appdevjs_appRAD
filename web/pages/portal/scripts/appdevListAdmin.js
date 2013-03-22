@@ -58,8 +58,6 @@ modelInstance:null,  // {object} a provided instance of the model to be used to 
                 var self = this;
                 
                 
-                
-                
                 //// Setup our dataManager events
                 this.dataReady(this.options.dataManager, function() {
                     // onSuccess: load our list and listen for any changes
@@ -87,18 +85,16 @@ modelInstance:null,  // {object} a provided instance of the model to be used to 
                 var html = this.view('/appRAD/portal/view/appdevListAdmin_entry.ejs', {name:rowMgr.getLabel()});
                 
                 $li.html(html);
+                $li.data('ad-model', rowMgr);
                
                 var self = this;
                 
-                $li.click(function(ev){ self.onSelect(ev); });
                 this.list.append($li);
-                
-                
-                
+
+                $li.click(function(ev){ self.onSelect(ev); });
                 $li.find('.ios-delete').click(function(ev){self.onDelSelect(ev);});
                 $li.find('.ios-buttons').click(function(ev){self.onDelConfirm(ev);});
 
-                $li.data('ad-model', rowMgr);
             },
             
             
@@ -237,7 +233,7 @@ modelInstance:null,  // {object} a provided instance of the model to be used to 
                 
                 
                 this.list = this.element.find('.admin-list');
-                this.list.selectable();
+                //this.list.selectable(); // <-- problems in safari / chrome
                 
                 this.button ={};
                 this.button.add = this.element.find('#btn-add');
@@ -430,7 +426,6 @@ modelInstance:null,  // {object} a provided instance of the model to be used to 
             
             onDelSelect: function(event) {
                 // they clicked the 'minus' icon next to an entry
-
                 var me = $(event.currentTarget);
                 var myDelConf = me.parent().parent().find('.pane_right');
                 var myContent = me.parent().parent().find('.pane_center');
@@ -536,9 +531,13 @@ console.log('appdevListAdmin ['+this.uid+'] charCode['+event.charCode+']');
             
             //-----------------------------------------------------------------
             onSelect: function(event) {
+                
+                // highlight only the selected item
+                this.list.find('li.active').removeClass('active');
+                $(event.currentTarget).addClass('active');
+
                 // call any provided onSelect handler when an item in our list 
                 // is selected.
-
                 if (this.options.onSelect) {
                     var model = $(event.currentTarget).data('ad-model');
                     this.options.onSelect(event, model);
