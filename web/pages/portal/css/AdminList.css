@@ -132,7 +132,7 @@ CSS for adminlist on the left
 }
 
 .pane_right {
-	float: right;
+	/*float: right;*/
 	margin:0 0.25em;	
 }
 
