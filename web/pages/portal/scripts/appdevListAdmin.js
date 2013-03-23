@@ -405,7 +405,7 @@ modelInstance:null,  // {object} a provided instance of the model to be used to 
                 var doDe
                 // get the associated model object for the obj to delete
                 var me = $(event.currentTarget);
-                var myLI = me.parent().parent().parent();
+                var myLI = me.parents('li').first();
                 var rowMgr = myLI.data('ad-model');
                 
 //// TODO: try something like this.options.model.destroy : true/false                
