@@ -315,6 +315,7 @@ modelInstance:null,  // {object} a provided instance of the model to be used to 
             loadFromDataManager: function() {
                 
                 var self = this;
+                this.clearList();
                 this.options.dataManager.each(function(entry){
                    
                     self.addEntry(entry);
