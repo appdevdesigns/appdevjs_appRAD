@@ -3,6 +3,16 @@ CSS for adminlist on the left
 */
 
 
+.admin-list .header-title {
+    float: left;
+}
+.admin-list .header-title h4 {
+    margin: 10px 0;
+}
+.adminlist-entry {
+    clear: both;
+}
+
 
 /*ADD, DELETE, EDIT ON LEFT*/
 
@@ -41,6 +51,33 @@ CSS for adminlist on the left
 /*ADD, DELETE, EDIT ON LEFT END*/
 
 /*IOS LIKE DELETE FUNCTION */
+
+.ios-buttons a {
+	line-height:18px !important;
+
+}
+
+.ios-buttons {
+	color:#fff !important;
+	font-size:10px !important;
+	padding: 2px 6px !important;
+	float:right;
+	
+
+}
+
+.ios-delete {
+	width:17px;
+	height:17px;
+	background-image:url(../images/redminusicon.png);
+	background-position: center top;
+	background-repeat:no-repeat;
+	
+}
+
+.ios-wrap {
+	overflow:hidden;
+}
 
 
 .wrapper {
