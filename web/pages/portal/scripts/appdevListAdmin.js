@@ -86,6 +86,7 @@ modelInstance:null,  // {object} a provided instance of the model to be used to 
                 
                 $li.html(html);
                 $li.data('ad-model', rowMgr);
+                $li.attr('model-id', rowMgr.getID());
                
                 var self = this;
                 
@@ -527,10 +528,9 @@ console.log('appdevListAdmin ['+this.uid+'] charCode['+event.charCode+']');
                 }
 
             },
-            
-            
-            
+
             //-----------------------------------------------------------------
+            // This is called when an item is clicked on
             onSelect: function(event) {
                 
                 // highlight only the selected item
@@ -542,6 +542,18 @@ console.log('appdevListAdmin ['+this.uid+'] charCode['+event.charCode+']');
                 if (this.options.onSelect) {
                     var model = $(event.currentTarget).data('ad-model');
                     this.options.onSelect(event, model);
+                }
+            },
+
+            // Select an item which we know to be in the list
+            select: function(model) {
+                //
+                this.element.find('[model-id=' + model.getID() + ']').addClass('active');
+                
+                // call any provided onSelect handler when an item in our list 
+                // is selected.
+                if (this.options.onSelect) {
+                    this.options.onSelect(null, model);
                 }
             },
 
