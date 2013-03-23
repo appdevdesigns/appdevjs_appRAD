@@ -115,7 +115,7 @@ modelInstance:null,  // {object} a provided instance of the model to be used to 
                 
                 var listModels = [];
                 
-                this.list.find('.ui-selected').each(function(indx, el){
+                this.list.find('.active').each(function(indx, el){
                 
                     var $el = $(el);
                     var model = $el.data('ad-model');
@@ -297,8 +297,10 @@ modelInstance:null,  // {object} a provided instance of the model to be used to 
                         if (button.buttonHandler) {
                             
                             // in order to properly track which button.handler, we need a closure:
+                            var self = this;
                             var buttonHandler = function (button) {
-                                thisButton.click(function(){ self.customButtonHandler(button.buttonHandler)});
+                                var _self = self;
+                                thisButton.click(function(){ _self.customButtonHandler(button.buttonHandler)});
                             }
                             buttonHandler(button);
                         }
