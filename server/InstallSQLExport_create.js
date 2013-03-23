@@ -57,7 +57,8 @@ var verifyParams = function (req, res, next) {
 
 var sqlDumpApps = {
         'mysql':function(user, pass, dbName, tables, fileName){
-            return 'mysqldump -u'+user+' -p'+pass+' --add-drop-table '+dbName+' '+tables+' > '+fileName;
+            var mysqldumpPath = AD.Defaults['dbPathMySQLDump']
+            return mysqldumpPath + ' -u'+user+' -p'+pass+' --add-drop-table '+dbName+' '+tables+' > '+fileName;
         },
         'posgres':'?? dunno ??' // Need to fill this in when we have support for different dbs
 }
