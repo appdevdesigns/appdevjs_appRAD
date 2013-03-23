@@ -544,7 +544,11 @@ console.log('appdevListAdmin ['+this.uid+'] charCode['+event.charCode+']');
                     this.options.onSelect(event, model);
                 }
             },
-            
+
+            // Clears the selected item
+            deSelect: function(event) {
+                this.list.find('li').removeClass('active');
+            },
 
 
             'li click': function(el, event) {
