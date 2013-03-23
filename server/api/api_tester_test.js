@@ -80,6 +80,7 @@ var testHRIS = function (req, res, next) {
 
     var got = AD.Comm.HTTP.get({ uri:'http://localhost:8088/hris/api/object'});
     $.when(got).then(function(data){
+        console.log('testHRIS:');
         console.log(data);
         next();
     });
