@@ -169,11 +169,6 @@ ul.admin-list li a{
 
 }
 
-ul.admin-list li.ui-selected a {
-    background-color: #1879DD;
-    color: white;
-}
-
 ul.admin-list li {
 	width:179px;
 	line-height:29px !important;
