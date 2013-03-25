@@ -48,7 +48,7 @@
                 
                 
                 // translate Labels
-                // any DOM element that has an attrib "appdLabelKey='xxxx'" will get it's contents
+                // any DOM element that has an attrib "appdLabelKey='xxxx'" will get its contents
                 // replaced with our Label.  Careful to not put this on places that have other content!
                 this.xlateLabels();
             },

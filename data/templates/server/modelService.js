@@ -21,7 +21,7 @@
 		      // Client Definitions
 				_adModule:'[module]',
 				_adResource:'[resourceName]',	// singular
-//				_adModel: [ModelName]   // <-- if the data returned is associated with a diff Model obj, provide it's name here:  _adModel:site.Label,
+//				_adModel: [ModelName]   // <-- if the data returned is associated with a diff Model obj, provide its name here:  _adModel:site.Label,
 				labelKey:'[labelKey]',
 				id:'[primaryKey]'  // the field that is the id of the data
 		  };

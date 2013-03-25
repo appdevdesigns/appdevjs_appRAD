@@ -5990,7 +5990,6 @@ table.table-striped tr td {
 
 .header-title{
 	float:left;
-	width:50.6%;
 	padding:4px 5px;
 
 }
@@ -6394,11 +6393,11 @@ ul.appdev-tabs {
 	background: #FFFFCC;*/
 }
 
-#tabs ul li.active a, #tabs2 ul li.active a, #tabs3 ul li.active a, #tabs4 ul li.active a, #tabs5 ul li.active a {
+#tabs > ul li.active > a, #tabs2 > ul li.active > a, #tabs3 > ul li.active > a, #tabs4 > ul li.active > a, #tabs5 > ul li.active > a {
 	color:#555;
 }
 
-#tabs ul li a:hover {
+#tabs > ul li a:hover {
 	color: #005580;
 }
 
@@ -6412,7 +6411,7 @@ ul.appdev-tabs {
 	line-height: 150%;
 }
 
-#tabs ul li > a, #tabs2 ul li > a, #tabs3 ul li > a, #tabs4 ul li > a, #tabs5 ul li > a {
+#tabs > ul li > a, #tabs2 > ul li > a, #tabs3 > ul li > a, #tabs4 > ul li > a, #tabs5 > ul li > a {
 	text-decoration: none;
 	padding: 8px;
 	color: #08C;

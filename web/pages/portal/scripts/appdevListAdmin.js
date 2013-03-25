@@ -58,8 +58,6 @@ modelInstance:null,  // {object} a provided instance of the model to be used to 
                 var self = this;
                 
                 
-                
-                
                 //// Setup our dataManager events
                 this.dataReady(this.options.dataManager, function() {
                     // onSuccess: load our list and listen for any changes
@@ -87,18 +85,17 @@ modelInstance:null,  // {object} a provided instance of the model to be used to 
                 var html = this.view('/appRAD/portal/view/appdevListAdmin_entry.ejs', {name:rowMgr.getLabel()});
                 
                 $li.html(html);
+                $li.data('ad-model', rowMgr);
+                $li.attr('model-id', rowMgr.getID());
                
                 var self = this;
                 
-                $li.click(function(ev){ self.onSelect(ev); });
                 this.list.append($li);
-                
-                
-                
+
+                $li.click(function(ev){ self.onSelect(ev); });
                 $li.find('.ios-delete').click(function(ev){self.onDelSelect(ev);});
                 $li.find('.ios-buttons').click(function(ev){self.onDelConfirm(ev);});
 
-                $li.data('ad-model', rowMgr);
             },
             
             
@@ -118,7 +115,7 @@ modelInstance:null,  // {object} a provided instance of the model to be used to 
                 
                 var listModels = [];
                 
-                this.list.find('.ui-selected').each(function(indx, el){
+                this.list.find('.active').each(function(indx, el){
                 
                     var $el = $(el);
                     var model = $el.data('ad-model');
@@ -237,7 +234,7 @@ modelInstance:null,  // {object} a provided instance of the model to be used to 
                 
                 
                 this.list = this.element.find('.admin-list');
-                this.list.selectable();
+                //this.list.selectable(); // <-- problems in safari / chrome
                 
                 this.button ={};
                 this.button.add = this.element.find('#btn-add');
@@ -300,8 +297,10 @@ modelInstance:null,  // {object} a provided instance of the model to be used to 
                         if (button.buttonHandler) {
                             
                             // in order to properly track which button.handler, we need a closure:
+                            var self = this;
                             var buttonHandler = function (button) {
-                                thisButton.click(function(){ self.customButtonHandler(button.buttonHandler)});
+                                var _self = self;
+                                thisButton.click(function(){ _self.customButtonHandler(button.buttonHandler)});
                             }
                             buttonHandler(button);
                         }
@@ -319,6 +318,7 @@ modelInstance:null,  // {object} a provided instance of the model to be used to 
             loadFromDataManager: function() {
                 
                 var self = this;
+                this.clearList();
                 this.options.dataManager.each(function(entry){
                    
                     self.addEntry(entry);
@@ -407,7 +407,7 @@ modelInstance:null,  // {object} a provided instance of the model to be used to 
                 var doDe
                 // get the associated model object for the obj to delete
                 var me = $(event.currentTarget);
-                var myLI = me.parent().parent().parent();
+                var myLI = me.parents('li').first();
                 var rowMgr = myLI.data('ad-model');
                 
 //// TODO: try something like this.options.model.destroy : true/false                
@@ -430,7 +430,6 @@ modelInstance:null,  // {object} a provided instance of the model to be used to 
             
             onDelSelect: function(event) {
                 // they clicked the 'minus' icon next to an entry
-
                 var me = $(event.currentTarget);
                 var myDelConf = me.parent().parent().find('.pane_right');
                 var myContent = me.parent().parent().find('.pane_center');
@@ -531,20 +530,39 @@ console.log('appdevListAdmin ['+this.uid+'] charCode['+event.charCode+']');
                 }
 
             },
-            
-            
-            
+
             //-----------------------------------------------------------------
+            // This is called when an item is clicked on
             onSelect: function(event) {
+                
+                // highlight only the selected item
+                this.list.find('li.active').removeClass('active');
+                $(event.currentTarget).addClass('active');
+
                 // call any provided onSelect handler when an item in our list 
                 // is selected.
-
                 if (this.options.onSelect) {
                     var model = $(event.currentTarget).data('ad-model');
                     this.options.onSelect(event, model);
                 }
             },
-            
+
+            // Select an item which we know to be in the list
+            select: function(model) {
+                //
+                this.element.find('[model-id=' + model.getID() + ']').addClass('active');
+                
+                // call any provided onSelect handler when an item in our list 
+                // is selected.
+                if (this.options.onSelect) {
+                    this.options.onSelect(null, model);
+                }
+            },
+
+            // Clears the selected item
+            deSelect: function(event) {
+                this.list.find('li').removeClass('active');
+            },
 
 
             'li click': function(el, event) {
