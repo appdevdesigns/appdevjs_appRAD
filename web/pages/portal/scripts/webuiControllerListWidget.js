@@ -54,8 +54,15 @@
             		file:controller.name
             	};
             	AD.Comm.Notification.publish('appRad.webui.pages.controller.selected',data);
+            },
+            'appRad.module.selected subscribe': function(msg, data) {
+
+                if (this.selectedModule != data.name) {
+                    this.selectedModule = data.name;
+
+                    this.controllerList.clearList();
+                }
             }
-            
         });
         
     }) ();
