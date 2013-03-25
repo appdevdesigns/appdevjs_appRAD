@@ -57,11 +57,16 @@
         // Developers can see this:
 //        if (AD.Viewer.hasPermission('developer')) {
             AD.Comm.Notification.subscribe('**', function(event,data){
-                
-                console.groupCollapsed('Event: ['+event+']');
+                if (console.groupCollapsed) {
+                    console.groupCollapsed('Event: ['+event+']');
+                } else {
+                    console.log('Event: ['+event+']');
+                }
                 console.log('data:');
                 console.log(data);
-                console.groupEnd();
+                if (console.groupEnd) {
+                    console.groupEnd();
+                }
                 
             });
 //        }
