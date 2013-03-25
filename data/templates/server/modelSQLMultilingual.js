@@ -7,6 +7,8 @@
 (function () {
     // Pull AppDev from the global scope on NodeJS and browser and load the AppDev CommonJS module on Titanium
     var AD = (typeof AppDev === "undefined" ? (typeof global === "undefined" ? require('AppDev') : global.AD) : AppDev);
+    var $ = AD.jQuery;
+
 
     // On Titanium and NodeJS, the full model definition is needed
     var extendedDefinition = typeof Titanium !== 'undefined' || typeof process !== 'undefined';
