@@ -92,8 +92,9 @@
             isValid:function(data) {
                 
                 var isValid = true;
+                var noService = true;
                 
-                var listNotEmpty = ['model_name', 'model_label_key', 'model_primary_key'];
+                var listNotEmpty = ['resourceName', 'labelKey', 'primaryKey'];
                 
                 for(var i=0; i<listNotEmpty.length; i++) {
                     var field = listNotEmpty[i];
@@ -101,6 +102,24 @@
                         isValid = false;
                         var labelKey = '[appRad.portal.error.Required]';
                         this.ADForm.validationErrorField(field,labelKey);
+                    }
+                }
+                
+                var servicesNotEmpty = ['publicLinks_create', 'publicLinks_update', 'publicLinks_destroy','publicLinks_findAll','publicLinks_findOne'];
+
+                for(var i=0;i<servicesNotEmpty.length;i++){
+                	var field = servicesNotEmpty[i];
+                	if (data[field] == true){
+                		noService = false;
+                	}
+                }
+                
+                if (noService){
+                	isValid = false;
+                    var labelKey = '[appRad.portal.error.RequiredOne]';
+                    for(var i=0;i<servicesNotEmpty.length;i++){
+                    	var field = servicesNotEmpty[i];
+                    	this.ADForm.validationErrorField(field,labelKey);
                     }
                 }
 
