@@ -62,12 +62,15 @@ var L = function(key) { return AD.Lang.Labels.getLabelHTML(key); };
                   <input type="checkbox" class="span7" data-bind="publicLinks_destroy">
                 </div>
             </div>                        
-            <p class="text-error center-align">error msg area</p>
-            <!--save start-->
-            <div class="save right-align">
-                <div class="busyicon-inline margin-right10"></div>
-              <button id="btn-cancel" class="btn btn-small btn-primary option-cancel">Cancel</button>
-              <button id="btn-save" class="btn  btn-small btn-primary">Save</button>
+            <div style="width:225px;">
+            	<div class="control-group error">
+            		<label class="control-label center-align ADForm-msg-error" for="inputError">error msg area</label>
+            	</div>
+             	<div class="control-group save right-align">
+                	<div class="busyicon-inline margin-right10"></div>
+                	<button id="btn-cancel" class="btn btn-xlarge btn-primary option-cancel">Cancel</button>
+                	<button id="btn-save" class="btn  btn-xlarge btn-primary ADForm-btn-submit">Save</button>
+            	</div>
             </div>                                            
             <!--save end-->                                                                        
             <!--CONTENTS OF LABELS HERE - END -->                                

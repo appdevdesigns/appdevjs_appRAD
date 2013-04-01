@@ -64,11 +64,44 @@ var verifyParams = function (req, res, next) {
 };
 
 ////---------------------------------------------------------------------
+var verifyModelName = function(module,modelName){
+	var dfd = $.Deferred();
+	var path = __appdevPath + '/modules/'+ module + '/models/' + modelName + '.js';
+	fs.exists(path,function(isThere){
+		if (isThere){
+			dfd.reject({errorMSG:'provided Model Name ['+modelName+'] already exists.'});
+		}else{
+			dfd.resolve(true);
+		}
+		
+	});
+	
+	return dfd;
+}
+
+////----------------------------------------------------------------------
+var verifyLabelKey = function(key,label){
+	dfd = $.Deferred();
+	if (key == ''){
+		dfd.reject({errorMSG:'provided primary Key is invalid'});
+	} else if (label == ''){
+		dfd.reject({errorMSG:'provided label Key is invalid'});
+	} else {
+		dfd.resolve(true);
+	}
+	
+	return dfd;
+};
+
+////---------------------------------------------------------------------
 var validateParams = function (req, res, next) {
     // Make sure provided parameters are valid.
     
 	var moduleName = req.param('module');
     var name = req.param('resourceName');
+    var primaryKey = req.param('primaryKey');
+    var labelKey = req.param('labelKey');
+    var publicLinks = req.param('publicLinks');
     if (name == '') {
         logDump(req, '  - error: No name provided');
 
@@ -84,6 +117,13 @@ var validateParams = function (req, res, next) {
         return;
     }
 
+    if (publicLinks == '') {
+    	logDump(req, ' - error: No public links provided');
+    	
+    	AD.Comm.Service.sendError(req, res, {errorMSG:'publicLinks not provided.'}, AD.Const.HTTP.ERROR_CLIENT );
+    	
+    	return;
+    }
     if (validation.containsPath(name)) {
         logDump(req, '  - error: Name contains disallowed characters');
 
@@ -110,8 +150,24 @@ var validateParams = function (req, res, next) {
         
             AD.Comm.Service.sendError(req, res, {errorMSG:msg}, AD.Const.HTTP.ERROR_CLIENT ); // 400: your fault
         } else {
-            // not there so we can continue.
-            next();
+        	labelKeyCorrect = verifyLabelKey(primaryKey,labelKey);
+        	modelNameCorrect = verifyModelName(moduleName,name);
+        	
+        	$.when(modelNameCorrect,labelKeyCorrect).then(function(){
+                // not there so we can continue.
+                next();
+        	}).fail(function(err){
+        		var error = {};
+        		for(var i=0;i<arguments.length;i++){
+        			if (arguments[i]){
+        				error = arguments[i];
+        			}
+        		}
+        		logDump(req, '  - error: '+error.errMSG);
+        		AD.Comm.Service.sendError(req, res, error, AD.Const.HTTP.ERROR_CLIENT);
+        		
+        	});
+
         }
     });
 };
