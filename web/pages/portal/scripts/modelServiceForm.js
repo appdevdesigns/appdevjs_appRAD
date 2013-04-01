@@ -44,11 +44,10 @@
                 this.addForm.ad_form({
                     dataManager:this.model,
                     dataValid:function(data){ return self.isValid(data);},
-                    error:'.text-error',
                     submit:'#btn-save',
                     cancel:'#btn-cancel',
                     onSubmit:function(model) {
-                    	self.onSubmit(model);
+                    	return self.onSubmit(model);
                     },
                     onCancel:function() {
                         
@@ -60,6 +59,12 @@
                 });
                 
                 this.ADForm = this.addForm.data('ADForm');
+                
+                this.ADForm.bind('saveDone',function(){
+                	self.model.clear();
+                	self.ADForm.clear();
+                	AD.Comm.Notification.publish('appRad.model.created',self);
+                });
                 
                 // translate Labels
                 // any DOM element that has an attrib "appdLabelKey='xxxx'" will get it's contents
@@ -145,18 +150,16 @@
             		publicLinks.push('destroy');
             	}
             	modelService = new appRAD.ModelService({
-            		module: this.selectedModule,
+            		module: self.selectedModule,
             		resourceName:model.resourceName,
             		labelKey:model.labelKey,
             		primaryKey:model.primaryKey,
             		publicLinks:publicLinks
             	});
             	
-            	modelService.save(function(data){
-            		model.clear();
-                    self.ADForm.clear();
-                    AD.Comm.Notification.publish('appRad.model.created',this);
-            	});
+            	self.ADForm.setModel(modelService);
+            	
+            	return true;
             },
             
             'appRad.module.selected subscribe': function(msg, data) {
