@@ -50,7 +50,7 @@ var hasPermission = function (req, res, next) {
 
 
     // if viewer has '[moduleName].[resourceName].[action]' action/permission
-        next();
+    next();
     // else
         // var errorData = { errorID:55, errorMSG:'No Permission' }
         // AD.Comm.Service.sendError(req, res, errorData, AD.Const.HTTP.ERROR_FORBIDDEN ); // 403 : you don't have permission
@@ -85,11 +85,11 @@ var publicLinks = {
 var serviceURL = publicLinks.[action].uri.replace('[id]',':id');
 
 var [resourceName]Stack = [
-        AD.App.Page.serviceStack,  // authenticates viewer, and prepares req.aRAD obj.
-        hasPermission,		       // make sure we have permission to access this
-        verifyParams,			   // make sure all required params are given
-//        step2, 	               // get a list of all Viewers
-//        step3		               // update each viewer's entry
+    AD.App.Page.serviceStack,  // authenticates viewer, and prepares req.aRAD obj.
+    hasPermission,		       // make sure we have permission to access this
+    verifyParams,			   // make sure all required params are given
+//  step2,   	               // get a list of all Viewers
+//  step3		               // update each viewer's entry
     ];
         
 

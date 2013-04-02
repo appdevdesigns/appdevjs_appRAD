@@ -19,11 +19,11 @@
 
 		  var attr = {
 		      // Client Definitions
-				_adModule:'[module]',
-				_adResource:'[resourceName]',	// singular
-//				_adModel: [ModelName]   // <-- if the data returned is associated with a diff Model obj, provide its name here:  _adModel:site.Label,
-				labelKey:'[labelKey]',
-				id:'[primaryKey]'  // the field that is the id of the data
+		      _adModule:'[module]',
+			  _adResource:'[resourceName]',	// singular
+//			  _adModel: [ModelName]   // <-- if the data returned is associated with a diff Model obj, provide its name here:  _adModel:site.Label,
+			  labelKey:'[labelKey]',
+			  id:'[primaryKey]'  // the field that is the id of the data
 		  };
 		  
 		  AD.Service.extend("[module].[ResourceName]",
