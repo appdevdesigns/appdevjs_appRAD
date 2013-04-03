@@ -1,18 +1,18 @@
 (function(){
 	AD.Controller.extend('webuiViewListWidget',{
-		
+
 		init:function(el,options){
-			
+
 			var self = this;
 			this.selectedController = null;
 			this.selectedPage = null;
 			this.selectedModule = null;
-			
-			// Initially we don't have a page/module to lookup, so don't make 
+
+			// Initially we don't have a page/module to lookup, so don't make
 			// a web service call
 			this.listViews = appRAD.Views.listIterator();
 			this.modelInstance = new appRAD.Views();
-			
+
 			this.element.appdev_list_admin({
 				title: '[apprad.portal.webui.views]',
 				buttons: {add:true},
@@ -27,14 +27,20 @@
 			});
 			this.viewList = this.element.data('appdev_list_admin');
 		},
+        'appRad.module.selected subscribe': function(msg, data) {
+
+            // a new module is selected, so clear our present list until a page is selected
+            this.viewList.clearList();
+
+        },
 		'appRad.webui.pages.page.selected subscribe':function(message,data){
 			this.refreshData(message,data);
 		},
-		
+
 		'appRad.webui.pages.controller.added subscribe':function(message,data){
 			this.refreshData(message,data);
 		},
-		
+
 		refreshData:function(message,data){
 			this.selectedPage = data.page;
         	this.selectedModule = data.module;
