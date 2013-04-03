@@ -23,13 +23,13 @@
                 
                 // make sure defaults are taken care of
                 var defaults = {
-                      uid:'[controller]_uuid_notGiven',
+                    uid:'[controller]_uuid_notGiven',
 /*                      
-                      dataManager:null, // the ListIterator of the data to display
-                      template:null,	// view(): the default view template
-                      templateEdit:null,// veiw(): the edit panel view
-                      templateDelete:null, // view():  the delete confirmation view
-                      title: null      // the MultilingualLabel Key for the title
+                    dataManager:null, // the ListIterator of the data to display
+                    template:null,	// view(): the default view template
+                    templateEdit:null,// veiw(): the edit panel view
+                    templateDelete:null, // view():  the delete confirmation view
+                    title: null      // the MultilingualLabel Key for the title
 */                      
                 };
                 var options = $.extend(defaults, options);

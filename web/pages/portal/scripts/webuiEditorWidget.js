@@ -21,7 +21,7 @@
                 });
             },
             displayFile:function(data){
-            	self = this;
+            	var self = this;
             	this.selectedModule = data.module;
             	this.selectedPage = data.page;
             	this.selectedFile = data.file;

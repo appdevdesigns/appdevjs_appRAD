@@ -39,18 +39,20 @@
                 	AD.Comm.Notification.publish('appRad.webui.pages.controller.added',data);
                 });
             },
-
-
-
+            onSelect:function(event,controller){
+                data = {
+                    module:this.selectedModule,
+                    page:this.selectedPage,
+                    file:controller.name
+                };
+                AD.Comm.Notification.publish('appRad.webui.pages.controller.selected',data);
+            },
             'appRad.module.selected subscribe': function(msg, data) {
 
                 // a new module is selected, so clear our present list until a page is selected
                 this.controllerList.clearList();
 
             },
-
-
-
             'appRad.webui.pages.page.selected subscribe':function(message,data){
             	this.selectedPage = data.page;
             	this.selectedModule = data.module;
@@ -59,13 +61,13 @@
             	this.modelInstance.attr('page',this.selectedPage);
             	this.modelInstance.attr('module',this.selectedModule);
             },
-            onSelect:function(event,controller){
-            	data = {
-            		module:this.selectedModule,
-            		page:this.selectedPage,
-            		file:controller.name
-            	};
-            	AD.Comm.Notification.publish('appRad.webui.pages.controller.selected',data);
+            'appRad.module.selected subscribe': function(msg, data) {
+
+                if (this.selectedModule != data.name) {
+                    this.selectedModule = data.name;
+
+                    this.controllerList.clearList();
+                }
             }
 
         });

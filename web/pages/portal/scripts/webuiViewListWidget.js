@@ -56,6 +56,15 @@
             		file:view.name
             	};
 			AD.Comm.Notification.publish('appRad.webui.pages.view.selected',data);
-		}
+		},
+        'appRad.module.selected subscribe': function(msg, data) {
+
+            if (this.selectedModule != data.name) {
+                this.selectedModule = data.name;
+
+                this.viewList.clearList();
+            }
+        }
+
 	});
 })();

@@ -44,11 +44,10 @@
                 this.addForm.ad_form({
                     dataManager:this.model,
                     dataValid:function(data){ return self.isValid(data);},
-                    error:'.text-error',
                     submit:'#btn-save',
                     cancel:'#btn-cancel',
                     onSubmit:function(model) {
-                    	self.onSubmit(model);
+                    	return self.onSubmit(model);
                     },
                     onCancel:function() {
                         
@@ -60,6 +59,12 @@
                 });
                 
                 this.ADForm = this.addForm.data('ADForm');
+                
+                this.ADForm.bind('saveDone',function(){
+                	self.model.clear();
+                	self.ADForm.clear();
+                	AD.Comm.Notification.publish('appRad.model.created',self);
+                });
                 
                 // translate Labels
                 // any DOM element that has an attrib "appdLabelKey='xxxx'" will get it's contents
@@ -92,8 +97,9 @@
             isValid:function(data) {
                 
                 var isValid = true;
+                var noService = true;
                 
-                var listNotEmpty = ['model_name', 'model_label_key', 'model_primary_key'];
+                var listNotEmpty = ['resourceName', 'labelKey', 'primaryKey'];
                 
                 for(var i=0; i<listNotEmpty.length; i++) {
                     var field = listNotEmpty[i];
@@ -101,6 +107,24 @@
                         isValid = false;
                         var labelKey = '[appRad.portal.error.Required]';
                         this.ADForm.validationErrorField(field,labelKey);
+                    }
+                }
+                
+                var servicesNotEmpty = ['publicLinks_create', 'publicLinks_update', 'publicLinks_destroy','publicLinks_findAll','publicLinks_findOne'];
+
+                for(var i=0;i<servicesNotEmpty.length;i++){
+                	var field = servicesNotEmpty[i];
+                	if (data[field] == true){
+                		noService = false;
+                	}
+                }
+                
+                if (noService){
+                	isValid = false;
+                    var labelKey = '[appRad.portal.error.RequiredOne]';
+                    for(var i=0;i<servicesNotEmpty.length;i++){
+                    	var field = servicesNotEmpty[i];
+                    	this.ADForm.validationErrorField(field,labelKey);
                     }
                 }
 
@@ -126,18 +150,16 @@
             		publicLinks.push('destroy');
             	}
             	modelService = new appRAD.ModelService({
-            		module: this.selectedModule,
+            		module: self.selectedModule,
             		resourceName:model.resourceName,
             		labelKey:model.labelKey,
             		primaryKey:model.primaryKey,
             		publicLinks:publicLinks
             	});
             	
-            	modelService.save(function(data){
-            		model.clear();
-                    self.ADForm.clear();
-                    AD.Comm.Notification.publish('appRad.model.created',this);
-            	});
+            	self.ADForm.setModel(modelService);
+            	
+            	return true;
             },
             
             'appRad.module.selected subscribe': function(msg, data) {

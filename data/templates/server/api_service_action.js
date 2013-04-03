@@ -86,12 +86,12 @@ var serviceURL = publicLinks.[action].uri.replace('[id]',':id');
 
 
 var [resource]Stack = [
-        AD.App.Page.serviceStack,  // authenticates viewer, and prepares req.aRAD obj.
-        hasPermission,		       // make sure we have permission to access this
-        verifyParams,			   // make sure all required params are given
+    AD.App.Page.serviceStack,  // authenticates viewer, and prepares req.aRAD obj.
+    hasPermission,		       // make sure we have permission to access this
+    verifyParams,			   // make sure all required params are given
 
-//        step2, 	               // get a list of all Viewers
-//        step3		               // update each viewer's entry
+//   step2, 	               // get a list of all Viewers
+//   step3		               // update each viewer's entry
     ];
 
 
