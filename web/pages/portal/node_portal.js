@@ -44,7 +44,8 @@ var portalPage = new AD.App.Interface({
                   'appdev_dropdown',
                   'appdev_list_languagepicker',
                   'appdev_codemirror',
-                  'appdev_option_twocolumn'
+                  'appdev_option_twocolumn',
+//                  'appdev_list_admin'
 // AppRAD: WIDGET DEPENDENCY //    
                  ]
     });

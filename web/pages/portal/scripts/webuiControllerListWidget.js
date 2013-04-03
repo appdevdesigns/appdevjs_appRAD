@@ -3,19 +3,19 @@
  */
     // Keep all variables and functions inside an encapsulated scope
     (function() {
-    
-    
+
+
         //// Setup Widget:
         AD.Controller.extend('webuiControllerListWidget', {
-    
-            
+
+
             init: function (el, options) {
 
                 var self = this;
-                
+
                 this.selectedPage = null;
                 this.selectedModule = null;
-                
+
 //                this.listControllers = appRAD.Controllers.listIterator({module:this.selectedModule,page:this.selectedPage});
                 this.listControllers = appRAD.Controllers.listIterator();
                 this.modelInstance = new appRAD.Controllers();
@@ -28,7 +28,7 @@
                 	templateEdit:'<input data-bind="controller" type="text" class="span12 option-input" placeholder="[apprad.portal.webui.controllers.add.name]">'
                 });
                 this.controllerList = this.element.data('appdev_list_admin');
-                
+
                 this.element.bind('addDone',function(ev, model){
                 	self.controllerList.clearList();
                 	self.listControllers.findAll({module:self.selectedModule,page:self.selectedPage});
@@ -37,8 +37,20 @@
                 		page: self.selectedPage
                 	};
                 	AD.Comm.Notification.publish('appRad.webui.pages.controller.added',data);
-                });         
+                });
             },
+
+
+
+            'appRad.module.selected subscribe': function(msg, data) {
+
+                // a new module is selected, so clear our present list until a page is selected
+                this.controllerList.clearList();
+
+            },
+
+
+
             'appRad.webui.pages.page.selected subscribe':function(message,data){
             	this.selectedPage = data.page;
             	this.selectedModule = data.module;
@@ -55,9 +67,9 @@
             	};
             	AD.Comm.Notification.publish('appRad.webui.pages.controller.selected',data);
             }
-            
+
         });
-        
+
     }) ();
 
 // });  // end steal
