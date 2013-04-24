@@ -2,7 +2,7 @@
 //   [moduleName]     : the name of this interface's module: (lowercase)
 //   [resourceName]       : the name of this service :  (lowercase)
 //   [ResourceName]   : the name of this service :  (Uppercase)
-//   [ActionName]	  : the action for this service : (lowercase) (optional).
+//   [ActionName]     : the action for this service : (lowercase) (optional).
 //   [requiredParams] : a list of required parameters for this service ('param1', 'param2', 'param3')
 
 /**
@@ -63,9 +63,9 @@ var hasPermission = function (req, res, next) {
 ////---------------------------------------------------------------------
 var verifyParams = function (req, res, next) {
     // Make sure all required parameters are given before continuing.
-	
-	var listRequiredParams = [[requiredParams]]; // each param is a string
-	AD.Util.Service.verifyParams(req, res, next, listRequiredParams);
+
+    var listRequiredParams = [[requiredParams]]; // each param is a string
+    AD.Util.Service.verifyParams(req, res, next, listRequiredParams);
 };
 
 
@@ -86,33 +86,33 @@ var serviceURL = publicLinks.[action].uri.replace('[id]',':id');
 
 var [resourceName]Stack = [
     AD.App.Page.serviceStack,  // authenticates viewer, and prepares req.aRAD obj.
-    hasPermission,		       // make sure we have permission to access this
-    verifyParams,			   // make sure all required params are given
-//  step2,   	               // get a list of all Viewers
-//  step3		               // update each viewer's entry
+    hasPermission,             // make sure we have permission to access this
+    verifyParams,              // make sure all required params are given
+//  step2,                     // get a list of all Viewers
+//  step3                      // update each viewer's entry
     ];
         
 
 [moduleName][ResourceName][ActionName].setup = function( app ) {
 
-	
-	////---------------------------------------------------------------------
-	app.[verb](serviceURL, [resourceName]Stack, function(req, res, next) {
-	    // test using: http://localhost:8088/[moduleName]/[resourceName]
-	
-	
-	    // By the time we get here, all the processing has taken place.
-	    logDump(req, 'finished /[module]/[resourceName] ([action])');
-	    
-	    
-	    // send a success message
-	    var successStub = {
-	            message:'done.' 
-	    }
-	    AD.Comm.Service.sendSuccess(req, res, successStub );  
-	    
-	});
-	
+
+    ////---------------------------------------------------------------------
+    app.[verb](serviceURL, [resourceName]Stack, function(req, res, next) {
+        // test using: http://localhost:8088/[moduleName]/[resourceName]
+
+
+        // By the time we get here, all the processing has taken place.
+        logDump(req, 'finished /[module]/[resourceName] ([action])');
+
+
+        // send a success message
+        var successStub = {
+                message:'done.'
+        }
+        AD.Comm.Service.sendSuccess(req, res, successStub );
+
+    });
+
 
     ////Register the public site/api
     this.setupSiteAPI('[resourceName]', publicLinks);

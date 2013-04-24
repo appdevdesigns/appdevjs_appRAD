@@ -87,11 +87,11 @@ var serviceURL = publicLinks.[action].uri.replace('[id]',':id');
 
 var [resource]Stack = [
     AD.App.Page.serviceStack,  // authenticates viewer, and prepares req.aRAD obj.
-    hasPermission,		       // make sure we have permission to access this
-    verifyParams,			   // make sure all required params are given
+    hasPermission,             // make sure we have permission to access this
+    verifyParams,              // make sure all required params are given
 
-//   step2, 	               // get a list of all Viewers
-//   step3		               // update each viewer's entry
+//   step2,                    // get a list of all Viewers
+//   step3                     // update each viewer's entry
     ];
 
 
@@ -99,22 +99,22 @@ var [resource]Stack = [
 
     ErrorMSG = this.module.Error;
 
-	////---------------------------------------------------------------------
-	app.[verb](serviceURL, [resource]Stack, function(req, res, next) {
-	    // test using: http://localhost:8088/[moduleName]/[serviceName]/[actionName]
+    ////---------------------------------------------------------------------
+    app.[verb](serviceURL, [resource]Stack, function(req, res, next) {
+        // test using: http://localhost:8088/[moduleName]/[serviceName]/[actionName]
 
 
-	    // By the time we get here, all the processing has taken place.
-	    logDump(req, 'finished /'+serviceURL+' ([action]) ');
+        // By the time we get here, all the processing has taken place.
+        logDump(req, 'finished /'+serviceURL+' ([action]) ');
 
 
-	    // send a success message
-	    var successStub = {
-	            message:'done.'
-	    }
-	    AD.Comm.Service.sendSuccess(req, res, successStub );
+        // send a success message
+        var successStub = {
+                message:'done.'
+        }
+        AD.Comm.Service.sendSuccess(req, res, successStub );
 
-	});
+    });
 
 
 /*

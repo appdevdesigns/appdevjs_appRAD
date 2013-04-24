@@ -105,16 +105,16 @@ var app = [pageName]Page.app;
  
 
 var step1 = function(req, res, next) {
-	
-	var guid = req.aRAD.viewer.viewer_globalUserID;
+
+    var guid = req.aRAD.viewer.viewer_globalUserID;
     
 
-	// data being passed to your template should be stored in req.aRAD.response.templateData
-	req.aRAD.response.templateData['token'] = guid;
-	
-	// they can be accessed in your template as <%- data.token %>
+    // data being passed to your template should be stored in req.aRAD.response.templateData
+    req.aRAD.response.templateData['token'] = guid;
 
-	next();
+    // they can be accessed in your template as <%- data.token %>
+
+    next();
 }
 
 [pageName]Page.pageStack = [step1];  // make sure this gets called after our page/unitViewer gets loaded:

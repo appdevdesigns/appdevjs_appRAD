@@ -27,35 +27,35 @@ var [moduleName][PageName]Setup = function (topic, data) {
     //// Setup Your Page Data/ Operation Here
 
 /*
- 		//// NOTE: all your business logic should be contained in separate 
- 		////       Controllers ([pageName]/scripts/*.js ).  This file is 
- 		////       simply to apply your controllers to the web page.  Keep it 
- 		////       simple here.
- 		
-		//// Setup Your Page Data/ Operation Here
-	    $('#ModuleWorkAreaPanel').module_work_area_panel();
-	    $('#PageWorkAreaPanel').page_work_area_panel();
-	    $('#ModelWorkAreaPanel').model_work_area_panel();
-	    
-	    
-	    var listModules = appRAD.Modules.listManager({});
-	    $('#listModules').module_list_widget({
-	    	title:'[appRad.portal.titleModuleList]', // this is the multilingual label key
-	        dataManager:listModules,
-	        height:'250',
-	        pageSize:5,
-	        buttons:{
-	        	add:true,
-	//        	delete:true,
-	//        	edit:true,
-	        	refresh:true
-	        }
-	    
-	    });
+        //// NOTE: all your business logic should be contained in separate
+        ////       Controllers ([pageName]/scripts/*.js ).  This file is
+        ////       simply to apply your controllers to the web page.  Keep it
+        ////       simple here.
+
+        //// Setup Your Page Data/ Operation Here
+        $('#ModuleWorkAreaPanel').module_work_area_panel();
+        $('#PageWorkAreaPanel').page_work_area_panel();
+        $('#ModelWorkAreaPanel').model_work_area_panel();
+
+
+        var listModules = appRAD.Modules.listManager({});
+        $('#listModules').module_list_widget({
+            title:'[appRad.portal.titleModuleList]', // this is the multilingual label key
+            dataManager:listModules,
+            height:'250',
+            pageSize:5,
+            buttons:{
+                add:true,
+    //          delete:true,
+    //          edit:true,
+                refresh:true
+            }
+
+        });
 */
-	
-	// unsubscribe me so this doesn't get called again ... 
-	AD.Comm.Notification.unsubscribe([pageName]SubID);
+
+    // unsubscribe me so this doesn't get called again ...
+    AD.Comm.Notification.unsubscribe([pageName]SubID);
 } // end [moduleName][PageName]Setup()
 var [pageName]SubID = AD.Comm.Notification.subscribe('ad.[moduleName].[pageName].setup',[moduleName][PageName]Setup);
 
